@@ -5,9 +5,6 @@ import { Helmet } from 'react-helmet';
 import {Form, Image} from 'react-bootstrap'
 import {useDispatch, useSelector} from 'react-redux'
 import login from '../../actions/userActions'
-import mouse from './img/mouse.png'
-import laptop from './img/laptop.png'
-import monitor from './img/monitor.png'
 import './logincss.css'
 
 
