@@ -5,7 +5,7 @@ import HashLoader from "react-spinners/HashLoader";
 import './Users.css'
 
 import {
-    Button, Input, Table,  Thead,
+    Button, Table,  Thead,
     Tbody,
     Tr,
     Th,

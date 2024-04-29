@@ -1,8 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import { Helmet } from 'react-helmet';
-
-import {Form, Image} from 'react-bootstrap'
 import {useDispatch, useSelector} from 'react-redux'
 import login from '../../actions/userActions'
 import './logincss.css'
@@ -43,7 +41,7 @@ const LoginScreen = ({location, history}) => {
   
   function remcl(){
     let parent = this.parentNode.parentNode;
-    if(this.value == ""){
+    if(this.value === ""){
       parent.classList.remove("focus");
     }
   }

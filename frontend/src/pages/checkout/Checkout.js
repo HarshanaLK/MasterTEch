@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet';
-import { Input, Stack, Select, Image, Link } from "@chakra-ui/react"
+import { Input, Stack, Image, Link } from "@chakra-ui/react"
 import {RiShoppingCart2Line} from "react-icons/all"
 import './checkout.css'
 import { saveAddressshipping,savepaymentmethod } from '../../actions/cartActions'
@@ -16,7 +16,7 @@ const Checkout = ({history}) => {
     const [address, setAddress] = useState(shippingAddress.address)
     const [city, setCity] = useState(shippingAddress.city)
     const [postalCode, setPostalCode] = useState(shippingAddress.postalCode)
-    const [country, setCountry] = useState(shippingAddress.country)
+    const [country] = useState(shippingAddress.country)
     const [Payment, setPayment] = useState('Card')
 
     const dispatch = useDispatch()

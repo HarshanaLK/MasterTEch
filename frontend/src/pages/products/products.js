@@ -1,5 +1,5 @@
 import React,{useEffect} from 'react'
-import { DeleteProduct, listProducts,CreateProduct} from '../../actions/productActions';
+import { listProducts,CreateProduct} from '../../actions/productActions';
 import { useDispatch, useSelector } from 'react-redux';
 import { PRODUCT_CREATE_RESET } from '../../constants/productConstants';
 import './products.css'
@@ -12,13 +12,13 @@ import { Helmet } from 'react-helmet';
 const Products = ({history,match}) => {
     const dispatch = useDispatch()
     const productList = useSelector(state => state.productList)
-    const {loading,error,products} = productList
+    const {} = productList
 
     const productDelete = useSelector(state => state.productDelete)
-    const {loading:loadingDelete,error:errorDelete,success:successDelete} = productDelete
+    const {success:successDelete} = productDelete
 
     const productCreate = useSelector(state => state.productCreate)
-    const {loading:loadingCreate,error:errorCreate,success:successCreate,product:createdproduct} = productCreate
+    const {success:successCreate,product:createdproduct} = productCreate
 
     const userLogin = useSelector(state => state.userLogin)
     const {userInfo} = userLogin
@@ -36,12 +36,6 @@ const Products = ({history,match}) => {
 
         }
     },[dispatch,history,userInfo,successDelete,successCreate,createdproduct])
-    const deletehandler = (id) =>{
-        if(window.confirm('Are You Sure?')){
-            dispatch(DeleteProduct(id))
-
-        }
-    }
 
     const createproducthandler = () =>{
         dispatch(CreateProduct())

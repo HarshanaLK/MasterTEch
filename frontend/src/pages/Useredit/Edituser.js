@@ -1,9 +1,7 @@
-import React, {useState, useEffect,useRef} from 'react'
-import {Link} from 'react-router-dom'
-import {Form, Image} from 'react-bootstrap'
+import React, {useState, useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {getUserDetails,updateUser} from '../../actions/userActions'
-import { AiOutlineUser, HiOutlineMail, IoIosArrowDown } from 'react-icons/all';
+import { AiOutlineUser, HiOutlineMail} from 'react-icons/all';
 import HashLoader from "react-spinners/HashLoader";
 import './Edituser.css'
 import { Input, InputGroup, InputRightElement } from '@chakra-ui/input'
@@ -17,7 +15,7 @@ const Edituser = ({match,history}) => {
     const [name,setName] = useState('')
     const [email,setEmail] = useState('')
     const [isAdmin,setisAdmin] = useState(false)
-    const [message,setMessage] = useState(null) 
+    const [message] = useState(null) 
 
     const dispatch = useDispatch()
 

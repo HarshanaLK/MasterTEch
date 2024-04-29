@@ -1,9 +1,9 @@
 import React, {useEffect,useState,useRef} from 'react'
 import {useDispatch, useSelector } from 'react-redux'
 import { Helmet } from 'react-helmet';
-import {listProductDetails,createproductReview} from '../../actions/productActions'
-import {IoLogoFacebook,AiFillTwitterCircle,AiFillInstagram,AiFillShop,MdDoNotDisturb}  from "react-icons/all"
-import { Image,Select,Button, FormControl, FormLabel, Textarea } from "@chakra-ui/react"
+import {listProductDetails} from '../../actions/productActions'
+import {IoLogoFacebook,AiFillTwitterCircle,AiFillInstagram,MdDoNotDisturb}  from "react-icons/all"
+import { Image,Select,Button} from "@chakra-ui/react"
 import HashLoader from "react-spinners/HashLoader";
 import {PRODUCT_CREATE_REVIEW_RESET} from '../../constants/productConstants'
 import  './product.css'
@@ -11,8 +11,6 @@ import { Link } from 'react-router-dom'
 
 const Productpage = ({history,match}) => {
    const [qty, setQty] = useState(1)
-   const [rating, setrating] = useState(0)
-   const [comment,setcomment] = useState('')
 
    const imgs = document.querySelectorAll('.img-select a');
    const imgShowcase = useRef(null);
@@ -22,9 +20,9 @@ const Productpage = ({history,match}) => {
    const productDetails = useSelector(state => state.productDetails)
    const {loading,error,product} = productDetails
    const userLogin = useSelector(state => state.userLogin)
-   const {userInfo} = userLogin
+   const {} = userLogin
    const productReviewCreate = useSelector(state => state.productReviewCreate)
-   const {success:successProductReview,error:errorProductReview,} = productReviewCreate
+   const {success:successProductReview} = productReviewCreate
 
 
  imgBtns.forEach((imgItem) => {

@@ -6,16 +6,14 @@ import { Helmet } from 'react-helmet';
 
 
 import {
-    Button, Input, Table,  Thead,
+    Table,  Thead,
     Tbody,
     Tr,
     Th,
     Td,
     Box,
   } from "@chakra-ui/react"
-import { Link } from 'react-router-dom';
-import { AiFillDelete, AiOutlineEdit } from 'react-icons/ai';
-import { black, white } from 'color-name';
+
 
 const Orders = ({history}) => {
     const dispatch = useDispatch()
