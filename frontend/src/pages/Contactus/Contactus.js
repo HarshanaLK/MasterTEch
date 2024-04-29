@@ -8,7 +8,7 @@ const Contactus = () => {
     const [body, setbody] = useState('')
 
     const handlesubmit = () =>{
-        window.open(`mailto:abdessamadbouthjoul@gmail.com?subject=Sample&body=${body}`)
+        window.open(`harshana:mastertech@gmail.com?subject=Sample&body=${body}`)
     }
 
     const Line = useRef(null);
