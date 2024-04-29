@@ -1,14 +1,11 @@
 import React,{useEffect} from 'react'
 import { DeleteProduct, listProducts,CreateProduct} from '../../actions/productActions';
 import { useDispatch, useSelector } from 'react-redux';
-import HashLoader from "react-spinners/HashLoader";
 import { PRODUCT_CREATE_RESET } from '../../constants/productConstants';
 import './products.css'
 import {
     Button
   } from "@chakra-ui/react"
-import { Link } from 'react-router-dom';
-import { AiFillDelete, AiOutlineEdit } from 'react-icons/ai';
 import { CgAdd } from 'react-icons/cg';
 import { Helmet } from 'react-helmet';
 
