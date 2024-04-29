@@ -1,5 +1,4 @@
 import React,{useRef,useEffect, useState} from 'react'
-import { Image } from "@chakra-ui/react"
 import { Helmet } from 'react-helmet';
 import { Input,InputGroup, InputLeftElement, Textarea,Button  } from "@chakra-ui/react"
 import {BsEnvelope, GiPositionMarker, HiOutlinePhone} from 'react-icons/all'

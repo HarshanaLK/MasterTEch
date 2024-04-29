@@ -1,13 +1,10 @@
-import axios from 'axios'
 import React, {useState, useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {listProductDetails,UpdateProduct} from '../../actions/productActions'
 import HashLoader from "react-spinners/HashLoader";
 import { Input, InputGroup, } from '@chakra-ui/input'
 import { Helmet } from 'react-helmet';
-
-
-import {Box, Checkbox, Stack, Textarea, VStack} from '@chakra-ui/react'
+import {Box, Checkbox, Stack, Textarea} from '@chakra-ui/react'
 import { PRODUCT_UPDATE_RESET } from '../../constants/productConstants';
 import './Editproduct.css'
 
@@ -25,32 +22,18 @@ const Editproduct = ({match,history}) => {
     const [Url2,setUrl2] = useState('')
     const [Url3,setUrl3] = useState('')
 
-    const [Images,setImages] = useState([])
+    const [Images] = useState([])
     const [category,setcategory] = useState([])
     const [Dekstopselected,setDekstopselected] = useState(false)
     const [Laptopselected,setLaptopselected] = useState(false)
     const [UsedPartselected,setUsedPartselected] = useState(false)
     const [Softwareselected,setSoftwareselected] = useState(false)
     const [Accessoriesselected,setAccessoriesselected] = useState(false)
-
-
-   
-
-
-
-
-
-
-    const [message,setMessage] = useState(null) 
-
+    const [message] = useState(null)
     const dispatch = useDispatch()
-
     const productDetails = useSelector(state => state.productDetails)
-  
     const { loading,error, product } = productDetails
-
     const productUpdate = useSelector(state => state.productUpdate)
-  
     const { loading:lodingUpdate,error:errorUpdate, success:successUpdate } = productUpdate
 
 
