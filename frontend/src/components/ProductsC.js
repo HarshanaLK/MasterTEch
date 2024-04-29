@@ -2,14 +2,12 @@ import React,{useEffect,useState} from 'react'
 import { useDispatch,useSelector } from 'react-redux'
 import CardProduct from './CardProduct'
 import {listProducts,ListproductbyCg, Listproductbyfiter,Listproductbyprice} from '../actions/productActions'
-import {BsFilter,AiOutlineSearch,IoMdClose} from 'react-icons/all'
-import Search from './Search';
-import {NumberInput,NumberInputField,FormLabel, Button, Stack, FormControl} from "@chakra-ui/react"
+import {BsFilter,IoMdClose} from 'react-icons/all'
 import HashLoader from "react-spinners/HashLoader";
-import { Link, Route } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 const ProductsC = ({match,history}) => {
-    const [From, setFrom] = useState(0)
-    const [To, setTo] = useState(0)
+    const [From] = useState(0)
+    const [To] = useState(0)
 
     let Cg = window.location.search ? window.location.search.split('=')[1] : null
     const keyword = window.location.pathname.split('/')[2] 
@@ -18,9 +16,7 @@ const ProductsC = ({match,history}) => {
     const productbycg = useSelector((state)=>{
         return state.ListproductbyCg
     })
-    const productbyfilter = useSelector((state)=>{
-        return state.Listproductbyfilter
-    })
+  
     const productbyprice = useSelector((state)=>{
         return state.Listproductbyprice
     })
@@ -52,15 +48,7 @@ const ProductsC = ({match,history}) => {
         }
  
     }
-    const searchfunc=()=>{
-        setshowsearch(!showsearch);
-        if(showfilter){
-            setshowfilter(false)
-        }
-    }
-    const pricehandler = ()=>{
-        dispatch(Listproductbyprice(From,To))
-    }
+
 
     return (
         <>

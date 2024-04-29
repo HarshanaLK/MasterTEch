@@ -4,7 +4,7 @@ import {Input} from '@chakra-ui/react'
 const Search = ({history}) => {
     const [keyword, setkeyword] = useState('')
     const Handlesearch = (e) => {
-        if(keyword.trim() && e.which == 13){
+        if(keyword.trim() && e.which === 13){
             history.push(`/search/${keyword}`)
         }else{
         }

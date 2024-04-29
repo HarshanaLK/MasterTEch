@@ -1,7 +1,6 @@
-import React,{useRef,useEffect, useState} from 'react'
+import React,{useRef,useEffect} from 'react'
 import { Helmet } from 'react-helmet';
 import {Image} from '@chakra-ui/react'
-import HashLoader from "react-spinners/HashLoader";
 import './aboutcss.css'
 import image1 from './make.jpg';
 import image2 from './hp.jpg';
@@ -9,10 +8,6 @@ import image3 from './dell.jpg';
 import image4 from './intel.jpg';
 import image5 from './microsoft.jpg';
 import image6 from './asus.png';
-
-
-
-
 
 
 const About = () => {

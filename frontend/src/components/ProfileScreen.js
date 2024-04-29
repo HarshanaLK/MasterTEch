@@ -1,14 +1,10 @@
 import React, {useState, useEffect,useRef} from 'react'
-import {Link} from 'react-router-dom'
-import {Form, Image} from 'react-bootstrap'
+import {Image} from 'react-bootstrap'
 import {useDispatch, useSelector} from 'react-redux'
 import ProfLogo from './img/logo.png'
-import Back from './img/back.jpg'
 import { Helmet } from 'react-helmet';
 import {getUserDetails, updateUserProfile} from '../actions/userActions'
 import {listMyOrders } from '../actions/orderActions'
-import { IoIosArrowDown } from 'react-icons/all';
-import HashLoader from "react-spinners/HashLoader";
 import ProfPic from "./img/ProfPic.jpg"
 import './ProfileScreen.css'
 import { AiOutlineEdit } from 'react-icons/ai'
@@ -16,7 +12,7 @@ import { AiOutlineEdit } from 'react-icons/ai'
 
 const ProfileScreen = ({location, history}) => {
   const [name,setName] = useState('')
-  const [ShowOrders,setShowOrders] = useState(false)
+  const [ShowOrders] = useState(false)
   const [email,setEmail] = useState('')
   const [password,setPassword] = useState('')
   const [confirmPassword,setConfirmPassword] = useState('')
@@ -46,7 +42,7 @@ const ProfileScreen = ({location, history}) => {
 
   const orderMylist = useSelector(state => state.orderMylist)
 
-  const { loading:loadingOrders,error:errorOrders,orders } = orderMylist
+  const { } = orderMylist
 
   useEffect(() => {
     if(!userInfo) {
@@ -83,7 +79,7 @@ const ProfileScreen = ({location, history}) => {
   
   function remcl(){
     let parent = this.parentNode.parentNode;
-    if(this.value == ""){
+    if(this.value === ""){
       parent.classList.remove("focus");
     }
   }
@@ -101,9 +97,7 @@ const ProfileScreen = ({location, history}) => {
     inputa.addEventListener("focus", addcl);
     inputa.addEventListener("blur", remcl);
   });
-  const handelshow = ()=>{
-
-  }
+ 
 
 
 

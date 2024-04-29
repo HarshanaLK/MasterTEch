@@ -1,18 +1,12 @@
 import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
-import {Form, Image} from 'react-bootstrap'
 import {useDispatch, useSelector} from 'react-redux'
-import login from '../actions/userActions'
 import { Helmet } from 'react-helmet';
 import {register} from '../actions/userActions'
 
 
-import {
-  Button, Input
-} from "@chakra-ui/react"
-
 const RegisterScreen = ({location, history}) => {
-    const [name,setName] = useState('')
+  const [name,setName] = useState('')
   const [email,setEmail] = useState('')
   const [password,setPassword] = useState('')
   const [confirmPassword,setConfirmPassword] = useState('')
@@ -53,7 +47,7 @@ const RegisterScreen = ({location, history}) => {
   
   function remcl(){
     let parent = this.parentNode.parentNode;
-    if(this.value == ""){
+    if(this.value === ""){
       parent.classList.remove("focus");
     }
   }
