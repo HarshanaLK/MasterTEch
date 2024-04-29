@@ -17,15 +17,7 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                <div className="fooHelp">
-                    <h1>Help</h1>
-                    <ul>
-                        <li>Tracke Order</li>
-                        <li>Returns</li>
-                        <li>Shipping</li>
-                        <li>FAQs</li>
-                    </ul>
-                </div>
+      
 
                 <div className="footerGetInTouch">
                     <h1>Get in touch</h1>
@@ -66,9 +58,6 @@ const Footer = () => {
                 </div>
                 
                 <div className="paragraphFooter"><p>Copyright ©2024 All rights reserved by MasterTH/Harshana</p>
-                <Link to = '' >HarshanaLK</Link>
-                <Link to = ''  >Harshana</Link>
-                <Link to = ''  >Harshana</Link>
                 </div>
 
 
