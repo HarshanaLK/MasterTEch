@@ -1,8 +1,7 @@
 import { Image } from '@chakra-ui/image'
-import React,{useRef,useState,useEffect} from 'react'
-import { Select } from "@chakra-ui/react"
+import React,{useState,useEffect} from 'react'
 import { VscChromeClose } from "react-icons/all";
-import { addToCart,removeFromCart } from '../actions/cartActions';
+import { removeFromCart } from '../actions/cartActions';
 import { useDispatch } from "react-redux";
 import { Link } from 'react-router-dom';
 
@@ -11,17 +10,14 @@ import { Link } from 'react-router-dom';
 const Productoncart = ({product}) => {
     const dispatch = useDispatch();
 
-    const [qty,setqty] = useState(0)
-    const select = useRef(null);
+    const [qty] = useState(0)
     useEffect(() => {
         console.log(product.images)
         return () => {
         }
     },[])
 
-    const optionvalue = () => {
-         setqty(parseInt(select.current.value));
-    }
+  
     const removeFromCartHandler  = (id) =>{
         dispatch(removeFromCart(id))
     }

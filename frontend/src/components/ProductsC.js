@@ -1,13 +1,12 @@
 import React,{useEffect,useState} from 'react'
 import { useDispatch,useSelector } from 'react-redux'
 import CardProduct from './CardProduct'
-import {listProducts,ListproductbyCg, Listproductbyfiter,Listproductbyprice} from '../actions/productActions'
+import {listProducts,ListproductbyCg, Listproductbyfiter} from '../actions/productActions'
 import {BsFilter,IoMdClose} from 'react-icons/all'
 import HashLoader from "react-spinners/HashLoader";
 import { Link} from 'react-router-dom'
 const ProductsC = ({match,history}) => {
-    const [From] = useState(0)
-    const [To] = useState(0)
+
 
     let Cg = window.location.search ? window.location.search.split('=')[1] : null
     const keyword = window.location.pathname.split('/')[2] 

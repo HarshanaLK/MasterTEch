@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import { Link } from "react-router-dom";
-import { RiArrowRightSLine  , TiArrowRight,BsArrowBarRight} from "react-icons/all";
+import { RiArrowRightSLine  , BsArrowBarRight} from "react-icons/all";
 
 
 const Empty = () => {

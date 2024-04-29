@@ -2,10 +2,9 @@ import React , {useRef,useState,useEffect} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import { Route } from 'react-router-dom';
 import {Link, NavLink } from 'react-router-dom'
-import { Button, Input,InputGroup,Menu, MenuButton, MenuItem, MenuList} from "@chakra-ui/react"
-import {RiShoppingCart2Line,IoCloseOutline,MdSearch,BsArrowRightShort,MdKeyboardArrowRight,IoLogOutOutline,CgProfile, IoChevronDownCircleOutline, IoMdArrowDropdown} from "react-icons/all"
+import { Button, Menu, MenuButton, MenuItem, MenuList} from "@chakra-ui/react"
+import {RiShoppingCart2Line,MdSearch,BsArrowRightShort,MdKeyboardArrowRight,IoLogOutOutline,CgProfile,IoMdArrowDropdown} from "react-icons/all"
 import {logout} from '../actions/userActions'
-import { keyword } from 'color-convert'
 import Searchnav from './Searchnav';
 import logoImage from './logo.png';
 
@@ -40,12 +39,7 @@ import logoImage from './logo.png';
             searchRef.current.classList.toggle('searchActive')
             searchRef.current.style.animation = 'moving 0.3s ease both 0.3s'
         }  
-        const onDelSeacrh =  () =>{
-            
-            setShowSearchIc(!showSearchIc) //true
-            searchRef.current.classList.toggle('searchActive')
 
-        }
 
         const onBurgActive = () =>{
             //Toggle Nav
