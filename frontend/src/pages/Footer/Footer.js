@@ -36,7 +36,7 @@ const Footer = () => {
                 </div>
 
                 <div className="footerNews">
-                    <h1>Newsletter</h1>
+                    <h1>Contact Us</h1>
                     <ul>
                         <li>
                             <Stack spacing={3}>
@@ -57,7 +57,7 @@ const Footer = () => {
                     
                 </div>
                 
-                <div className="paragraphFooter"><p>Copyright ©2024 All rights reserved by MasterTH/Harshana</p>
+                <div className="paragraphFooter"><p>Copyright ©2024 All rights reserved by MasterTech</p>
                 </div>
 
 
