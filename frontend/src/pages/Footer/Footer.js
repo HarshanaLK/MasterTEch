@@ -10,10 +10,10 @@ const Footer = () => {
                 <div className="footerCategorie">
                     <h1>Categories</h1>
                     <ul>
-                        <li><Link to = '/shop/?cg=Women'>Computers</Link></li>
-                        <li><Link to = '/shop/?cg=Men'>Laptops</Link></li>
-                        <li><Link to = '/shop/?cg=Shoes'>Accessories</Link></li>
-                        <li><Link to = '/shop/?cg=Watches'>Used Parts</Link></li>
+                        <li><Link to = '/shop/?cg=Dekstop'>Dekstop</Link></li>
+                        <li><Link to = '/shop/?cg=Laptop'>Laptops</Link></li>
+                        <li><Link to = '/shop/?cg=Accessories'>Accessories</Link></li>
+                        <li><Link to = '/shop/?cg=Used'>Used Parts</Link></li>
                     </ul>
                 </div>
 
