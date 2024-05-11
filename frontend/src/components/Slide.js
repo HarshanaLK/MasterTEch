@@ -1,9 +1,9 @@
 import {React,useEffect,useState}  from 'react'
 import {IoIosArrowForward,IoIosArrowBack} from 'react-icons/all'
 import { Link } from 'react-router-dom';
-import ShopNowBtn from './ShopNowBtn'
-const Slider = () => {
-     const SliderData = [
+import ShopButton from './ShopButton'
+const Slide = () => {
+     const SlideData = [
         {
             first: "Welcome To The MasterTECH"
         },
@@ -23,7 +23,7 @@ const Slider = () => {
         }
       ];
     const [current, setCurrent] = useState(0);
-    const length = SliderData.length;
+    const length = SlideData.length;
     const [auto,setauto] = useState(true);
     const intervaltime = 6000;
     let slideinterval;
@@ -50,14 +50,14 @@ const Slider = () => {
    })
  
     return (
-        <div className = 'slider'>
-            {SliderData.map((slide,index) =>{
+        <div className = 'Slide'>
+            {SlideData.map((slide,index) =>{
                 return(
                     <div key = {index} className={index === current ? 'slide current' : 'slide'}>
                     <h4 className='first'>{slide.first}</h4>
-                    <h1 className = 'titleslider'>{slide.title}</h1>
-                    <h3 className = 'subtitleslider'>{slide.subtitle}</h3>
-                    <div className = 'content'> <Link to= '/Shop'> <ShopNowBtn /></Link>  </div>
+                    <h1 className = 'titleSlide'>{slide.title}</h1>
+                    <h3 className = 'subtitleSlide'>{slide.subtitle}</h3>
+                    <div className = 'content'> <Link to= '/Shop'> <ShopButton /></Link>  </div>
                     </div>
                 );
  
@@ -68,4 +68,4 @@ const Slider = () => {
     )
 }
  
-export default Slider
+export default Slide

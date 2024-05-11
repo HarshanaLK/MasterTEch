@@ -1,4 +1,4 @@
-import Nav from './components/Nav'
+import NaviBar from './components/NaviBar'
 import Home from './pages/Home'
 import About from './pages/About/About'
 import Shop from './pages/Shop'
@@ -10,18 +10,18 @@ import LoginScreen from './pages/Login/LoginScreen'
 import React, {useState,useEffect} from 'react'
 import {BrowserRouter as Router , Switch ,Route } from 'react-router-dom'
 import { ChakraProvider } from "@chakra-ui/react"
-import ScrollIntoView from "./components/Scrollintoview";
+import ScrollIntoView from "./components/ScrollBar";
 import HashLoader from "react-spinners/HashLoader";
-import RegisterScreen from './components/RegisterScreen'
-import ProfileScreen from './components/ProfileScreen'
+import RegUserDis from './components/RegUserDis'
+import CustomerDis from './components/CustomerDis'
 import Checkout from "./pages/checkout/Checkout";
 import Placeorder from './pages/placeorder/Placeorder'
 import Order from './pages/Order/Order'
 import Users from './pages/Userslist/Users'
-import NotFoundPage from './components/Notfoundpage'
+import NotFoundPage from './components/NoResult'
 import Edituser from './pages/Useredit/Edituser'
 import Products from './pages/products/products'
-import Editproduct from './pages/Editproduct/Editproduct'
+import ProEdit from './pages/ProEdit/ProEdit'
 import Orders from './pages/Orders/Orders'
 
 
@@ -46,7 +46,7 @@ import Orders from './pages/Orders/Orders'
             </div>
           :
          <>
-                 <Nav/>
+                 <NaviBar/>
                  <Switch>              
                  <Route path="/" exact component={Home}/>
                  <Route path="/about" component={About}/>
@@ -55,8 +55,8 @@ import Orders from './pages/Orders/Orders'
                  <Route path="/product/:id" component={Productpage}/>
                  <Route path="/cart/:id?" component={Cartpage}/>
                  <Route path="/login" component={LoginScreen}/>
-                 <Route path="/register" component={RegisterScreen}/>
-                 <Route path="/profile" component={ProfileScreen}/>
+                 <Route path="/register" component={RegUserDis}/>
+                 <Route path="/profile" component={CustomerDis}/>
                  <Route path="/shipping" component={Checkout}/>
                  <Route path="/placeorder" component={Placeorder}/>
                  <Route path="/order/:id" component={Order}/>
@@ -65,7 +65,7 @@ import Orders from './pages/Orders/Orders'
                  <Route path="/admin/orderlist" component={Orders}/>
                  <Route path="/search/:keyword" component={Shop}/>
                  <Route path="/admin/user/:id/edit" component={Edituser}/>
-                 <Route path="/admin/product/:id/edit" component={Editproduct}/>
+                 <Route path="/admin/product/:id/edit" component={ProEdit}/>
 
                  <Route component={NotFoundPage} />
 

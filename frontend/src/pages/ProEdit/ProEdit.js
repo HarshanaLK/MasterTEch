@@ -1,17 +1,17 @@
 import React, {useState, useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
-import {listProductDetails,UpdateProduct} from '../../actions/productActions'
+import {listProductDetails,UpdateProduct} from '../../function/productActions'
 import HashLoader from "react-spinners/HashLoader";
 import { Input, InputGroup, } from '@chakra-ui/input'
 import { Helmet } from 'react-helmet';
 import {Box, Checkbox, Stack, Textarea} from '@chakra-ui/react'
-import { PRODUCT_UPDATE_RESET } from '../../constants/productConstants';
-import './Editproduct.css'
+import { PRODUCT_UPDATE_RESET } from '../../ConsFunction/productConstants';
+import './ProEdit.css'
 
 
 
 
-const Editproduct = ({match,history}) => {
+const ProEdit = ({match,history}) => {
     
     const productId = match.params.id
     const [name,setName] = useState('')
@@ -232,4 +232,4 @@ const Editproduct = ({match,history}) => {
     )
 }
 
-export default Editproduct
+export default ProEdit

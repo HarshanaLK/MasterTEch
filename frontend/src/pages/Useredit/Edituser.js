@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
-import {getUserDetails,updateUser} from '../../actions/userActions'
+import {getUserDetails,updateUser} from '../../function/userActions'
 import { AiOutlineUser, HiOutlineMail} from 'react-icons/all';
 import HashLoader from "react-spinners/HashLoader";
 import './Edituser.css'
 import { Input, InputGroup, InputRightElement } from '@chakra-ui/input'
 import { Checkbox } from '@chakra-ui/checkbox'
-import {  USER_UPDATE_RESET } from '../../constants/userConstants';
+import {  USER_UPDATE_RESET } from '../../ConsFunction/userConstants';
 import { Helmet } from 'react-helmet';
 
 

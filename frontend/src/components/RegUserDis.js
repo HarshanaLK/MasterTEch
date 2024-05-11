@@ -2,10 +2,10 @@ import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import {useDispatch, useSelector} from 'react-redux'
 import { Helmet } from 'react-helmet';
-import {register} from '../actions/userActions'
+import {register} from '../function/userActions'
 
 
-const RegisterScreen = ({location, history}) => {
+const RegUserDis = ({location, history}) => {
   const [name,setName] = useState('')
   const [email,setEmail] = useState('')
   const [password,setPassword] = useState('')
@@ -147,4 +147,4 @@ const RegisterScreen = ({location, history}) => {
     )
 }
 
-export default RegisterScreen
+export default RegUserDis

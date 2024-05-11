@@ -3,14 +3,14 @@ import {Image} from 'react-bootstrap'
 import {useDispatch, useSelector} from 'react-redux'
 import ProfLogo from './img/logo.png'
 import { Helmet } from 'react-helmet';
-import {getUserDetails, updateUserProfile} from '../actions/userActions'
-import {listMyOrders } from '../actions/orderActions'
+import {getUserDetails, updateUserProfile} from '../function/userActions'
+import {listMyOrders } from '../function/orderActions'
 import ProfPic from "./img/ProfPic.jpg"
-import './ProfileScreen.css'
+import './CustomerDis.css'
 import { AiOutlineEdit } from 'react-icons/ai'
 
 
-const ProfileScreen = ({location, history}) => {
+const CustomerDis = ({location, history}) => {
   const [name,setName] = useState('')
   const [ShowOrders] = useState(false)
   const [email,setEmail] = useState('')
@@ -200,4 +200,4 @@ const ProfileScreen = ({location, history}) => {
     )
 }
 
-export default ProfileScreen
+export default CustomerDis

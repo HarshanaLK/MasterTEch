@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import { Helmet } from 'react-helmet';
 import {useDispatch, useSelector} from 'react-redux'
-import login from '../../actions/userActions'
+import login from '../../function/userActions'
 import './logincss.css'
 
 

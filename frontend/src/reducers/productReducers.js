@@ -20,7 +20,7 @@ import {
     PRODUCT_CREATE_REVIEW_SUCCESS,
     PRODUCT_CREATE_REVIEW_FAIL,
     PRODUCT_CREATE_REVIEW_RESET,
-} from '../constants/productConstants'
+} from '../ConsFunction/productConstants'
 export const productListReducer = (state={products: [] },action) => {
     switch(action.type) {
         case PRODUCT_LIST_REQUEST :

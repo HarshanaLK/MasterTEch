@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { Input, Stack, Image, Link } from "@chakra-ui/react"
 import {RiShoppingCart2Line} from "react-icons/all"
 import './checkout.css'
-import { saveAddressshipping,savepaymentmethod } from '../../actions/cartActions'
+import { saveAddressshipping,savepaymentmethod } from '../../function/cartActions'
 import { useDispatch, useSelector } from 'react-redux'
 
 const Checkout = ({history}) => {

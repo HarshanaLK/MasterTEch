@@ -1,5 +1,5 @@
 import React,{useEffect} from 'react'
-import { ListUsers,DeleteUser } from '../../actions/userActions';
+import { ListUsers,DeleteUser } from '../../function/userActions';
 import { useDispatch, useSelector } from 'react-redux';
 import HashLoader from "react-spinners/HashLoader";
 import './Users.css'

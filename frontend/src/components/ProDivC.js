@@ -1,7 +1,7 @@
 import {React } from 'react'
 
  
-const CgDiv = () => {
+const ProDivC = () => {
  
 
  
@@ -11,4 +11,4 @@ const CgDiv = () => {
     )
 }
  
-export default CgDiv
+export default ProDivC

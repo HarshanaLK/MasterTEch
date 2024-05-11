@@ -200,9 +200,9 @@ nav {
   margin: 6px;
   transition: all 0.3s ease;
 }
-/*slider*/
+/*Slide*/
 
-.slider {
+.Slide {
   position: relative;
   height: 600px;
   background-color: #232020af;
@@ -271,7 +271,7 @@ nav {
   transition: all 0.7s ease-in-out 0.3s;
 }
 
-.slide .titleslider {
+.slide .titleSlide {
   color: #fff;
   opacity: 0;
   position: absolute;
@@ -281,7 +281,7 @@ nav {
   font-weight: 700;
   font-style: colo;
 }
-.slide .subtitleslider {
+.slide .subtitleSlide {
   opacity: 0;
   position: absolute;
   top: -600px;
@@ -291,12 +291,12 @@ nav {
   color: #fff;
   
 }
-.slide.current .titleslider {
+.slide.current .titleSlide {
   opacity: 1;
   transform: translateY(870px);
   transition: all 0.7s ease-in-out 0.3s;
 }
-.slide.current .subtitleslider {
+.slide.current .subtitleSlide {
   opacity: 1;
   transform: translateY(970px);
   transition: all 0.7s ease-in-out 0.3s;
@@ -454,7 +454,7 @@ nav {
   
 }
 
-/* --- CgDiv ----*/
+/* --- ProDivC ----*/
 
 .Cgfilter {
   margin: 35px;
@@ -816,7 +816,7 @@ nav {
     transform: translateX(100%);
     
   }
-  .slider {
+  .Slide {
     z-index: 0; 
     height: 510px;
   }
@@ -847,19 +847,19 @@ nav {
   }
 
 
-  .slide.current .titleslider {
+  .slide.current .titleSlide {
     font-size: 24px;
     
   }
-  .slide:first-child .titleslider {
+  .slide:first-child .titleSlide {
     font-size: 30px;
     
   }
-  .slide.current .subtitleslider {
+  .slide.current .subtitleSlide {
     font-size: 20px;
     margin-top: 60px;
   }
-  .slide:first-child .subtitleslider {
+  .slide:first-child .subtitleSlide {
     top: -550px;
   }
 
@@ -867,7 +867,7 @@ nav {
 
 
 
-/* button slider ******************/
+/* button Slide ******************/
   .slide.current .content {
     transform: translateX(840px);
     bottom: 200px;
@@ -878,7 +878,7 @@ nav {
     top: 540px;
   }
 
-  /* button slider stop************/
+  /* button Slide stop************/
 
 
 

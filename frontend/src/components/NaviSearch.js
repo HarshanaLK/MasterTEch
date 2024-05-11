@@ -2,7 +2,7 @@ import { Input, InputGroup, InputRightElement } from '@chakra-ui/input'
 import React, { useState } from 'react'
 import { MdSearch } from 'react-icons/md'
 
-const Searchnav = ({history}) => {
+const NaviSearch = ({history}) => {
     const [keyword, setkeyword] = useState('')
 
     const Handlesearch = (e) => {
@@ -26,4 +26,4 @@ const Searchnav = ({history}) => {
     )
 }
 
-export default Searchnav
+export default NaviSearch

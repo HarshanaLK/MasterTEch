@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import { useDispatch,useSelector } from 'react-redux'
-import CardProduct from './CardProduct'
-import {listProducts,ListproductbyCg, Listproductbyfiter} from '../actions/productActions'
+import ProCard from './ProCard'
+import {listProducts,ListproductbyCg, Listproductbyfiter} from '../function/productActions'
 import {BsFilter,IoMdClose} from 'react-icons/all'
 import HashLoader from "react-spinners/HashLoader";
 import { Link} from 'react-router-dom'
@@ -56,7 +56,7 @@ const ProductsC = ({match,history}) => {
             <div className = 'filtersbtn '>
             <button className = {`filterbtn ${showfilter ? 'activebtn' : ''}` }  
             onClick = {filterfunc} > {showfilter ?  <IoMdClose  size = '20'/>: <BsFilter size = '20'/> } 
-            Filter
+            ProductFilter
             </button>
             </div>
         
@@ -89,7 +89,7 @@ const ProductsC = ({match,history}) => {
             : products.length === 0 ? 
             <h1 className = 'nothingfound'>Nothing Found !!!</h1> : <div className='cardsProduct'>
                        {products.map((product) =>(
-                               <CardProduct key={product._id} product={product} />
+                               <ProCard key={product._id} product={product} />
 
                           )  )} 
                  </div> }

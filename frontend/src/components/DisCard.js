@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Cardscg = ({title}) => {
+const DisCard = ({title}) => {
     return (
 
         <div className="cardscg">
@@ -11,4 +11,4 @@ const Cardscg = ({title}) => {
     )
 }
 
-export default Cardscg
+export default DisCard

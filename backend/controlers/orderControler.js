@@ -2,9 +2,7 @@ import asyncHandler from 'express-async-handler'
 
 import Order from '../models/orderModel.js'
 
-// @desc Create new order
-// @route POST /api/orders
-// @access Private
+
 const addorderitems = asyncHandler(async (req, res) => {
     console.log(req.user)
 
@@ -30,9 +28,8 @@ const addorderitems = asyncHandler(async (req, res) => {
         res.status(201).json(createdOrder)
     }
 })
-    // @desc get order by id
-    // @route GET /api/orders/:id
-    // @access Private
+
+
 const getOrderById = asyncHandler(async (req, res) => {
     const order  = await Order.findById(req.params.id).populate('user','name email')
     if(order){
@@ -43,9 +40,8 @@ const getOrderById = asyncHandler(async (req, res) => {
     }
     
 })
-    // @desc update order to paid
-    // @route update /api/orders/:id/pay
-    // @access Private
+
+
 const updateOrderToPaid = asyncHandler(async (req, res) => {
     const order  = await Order.findById(req.params.id)
     if(order){
@@ -69,9 +65,7 @@ const updateOrderToPaid = asyncHandler(async (req, res) => {
 })
 
 
-// @desc update order to delivered
-    // @route update /api/orders/:id/deliver
-    // @access Private
+
     const updateOrderToDelivered = asyncHandler(async (req, res) => {
         const order  = await Order.findById(req.params.id)
         if(order){
@@ -86,18 +80,14 @@ const updateOrderToPaid = asyncHandler(async (req, res) => {
         }
         
     })
-    // @desc get logged in user orders
-    // @route GET /api/orders/myorders
-    // @access Private
+
 const GetMyOrders = asyncHandler(async (req, res) => {
     const orders  = await Order.find({user: req.user._id})
     res.json(orders)
     
 })
 
-// @desc get orders
-    // @route GET /api/admin/orders
-    // @access Private/admin
+
     const GetOrders = asyncHandler(async (req, res) => {
         const orders  = await Order.find({}).populate('user','id name')
         res.json(orders)

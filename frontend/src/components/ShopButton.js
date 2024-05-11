@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ShopNowBtn = () => {
+const ShopButton = () => {
     return (
             <button className="ShopNow">
                 SHOP NOW
@@ -9,4 +9,4 @@ const ShopNowBtn = () => {
     )
 }
 
-export default ShopNowBtn
+export default ShopButton

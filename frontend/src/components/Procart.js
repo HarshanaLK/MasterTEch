@@ -1,13 +1,13 @@
 import { Image } from '@chakra-ui/image'
 import React,{useState,useEffect} from 'react'
 import { VscChromeClose } from "react-icons/all";
-import { removeFromCart } from '../actions/cartActions';
+import { removeFromCart } from '../function/cartActions';
 import { useDispatch } from "react-redux";
 import { Link } from 'react-router-dom';
 
 
 
-const Productoncart = ({product}) => {
+const Procart = ({product}) => {
     const dispatch = useDispatch();
 
     const [qty] = useState(0)
@@ -49,4 +49,4 @@ const Productoncart = ({product}) => {
     )
 }
 
-export default Productoncart
+export default Procart

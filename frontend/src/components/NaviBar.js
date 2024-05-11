@@ -2,18 +2,19 @@ import React , {useRef,useState,useEffect} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import { Route } from 'react-router-dom';
 import {Link, NavLink } from 'react-router-dom'
-import { Button, Menu, MenuButton, MenuItem, MenuList} from "@chakra-ui/react"
-import {RiShoppingCart2Line,MdSearch,BsArrowRightShort,MdKeyboardArrowRight,IoLogOutOutline,CgProfile,IoMdArrowDropdown} from "react-icons/all"
-import {logout} from '../actions/userActions'
-import Searchnav from './Searchnav';
+import { Button, Input,InputGroup,Menu, MenuButton, MenuItem, MenuList} from "@chakra-ui/react"
+import {RiShoppingCart2Line,IoCloseOutline,MdSearch,BsArrowRightShort,MdKeyboardArrowRight,IoLogOutOutline,CgProfile, IoChevronDownCircleOutline, IoMdArrowDropdown} from "react-icons/all"
+import {logout} from '../function/userActions'
+import { keyword } from 'color-convert'
+import NaviSearch from './NaviSearch';
 import logoImage from './logo.png';
 
- const Nav = ({history}) => {
+ const NaviBar = ({history}) => {
     const [incart,setincart] = useState(0);
     const cart = useSelector(state => state.cart)
     const {cartItems} = cart
     const[nav,setNav]=useState(false)
-    const Nav = useRef(null)
+    const NaviBar = useRef(null)
 
 
      //search
@@ -39,10 +40,15 @@ import logoImage from './logo.png';
             searchRef.current.classList.toggle('searchActive')
             searchRef.current.style.animation = 'moving 0.3s ease both 0.3s'
         }  
+        const onDelSeacrh =  () =>{
+            
+            setShowSearchIc(!showSearchIc) //true
+            searchRef.current.classList.toggle('searchActive')
 
+        }
 
         const onBurgActive = () =>{
-            //Toggle Nav
+            //Toggle NaviBar
 
             const links = document.querySelectorAll('.navLinks li')
             navLinks.current.classList.toggle('burgerActive')
@@ -91,7 +97,7 @@ import logoImage from './logo.png';
         }
     
     return (
-       <nav ref = {Nav}  className={`nav ${nav ? 'active' : ''}`} >
+       <nav ref = {NaviBar}  className={`nav ${nav ? 'active' : ''}`} >
            <div className="barLogo">
             <Link to =''><img src={logoImage} alt="MasterTech Logo" /></Link>
            </div>
@@ -109,7 +115,7 @@ import logoImage from './logo.png';
             </div>
         <div className = "rightComp" ref = {rightItems}>
         <div  ref={searchRef} className="search">
-        <Route render={({history}) => <Searchnav history ={history}/>}/>
+        <Route render={({history}) => <NaviSearch history ={history}/>}/>
 
         </div>
 
@@ -158,4 +164,4 @@ import logoImage from './logo.png';
        </nav>
     )                   
 }
-export default Nav                      
+export default NaviBar                      

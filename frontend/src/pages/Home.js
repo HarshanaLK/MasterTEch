@@ -1,7 +1,7 @@
 import React,{} from 'react'
-import Slider from '../components/Slider'
-import Cardscg from '../components/Cardscg'
-import CgDiv from '../components/CgDiv'
+import Slide from '../components/Slide'
+import DisCard from '../components/DisCard'
+import ProDivC from '../components/ProDivC'
 import ProductsC from '../components/ProductsC'
 import { Helmet } from 'react-helmet';
 
@@ -15,13 +15,13 @@ const Home = () => {
             <title>MasterTech</title>
         </Helmet>
              <div>
-                <Slider/>
+                <Slide/>
                  <div className="cards">
-                         <Cardscg title='Dekstop'/>
-                         <Cardscg title='Laptop'/>
-                         <Cardscg title='Accessories'/>                
+                         <DisCard title='Dekstop'/>
+                         <DisCard title='Laptop'/>
+                         <DisCard title='Accessories'/>                
                  </div>
-                <CgDiv/>
+                <ProDivC/>
                 <ProductsC/>
         </div>
         </>

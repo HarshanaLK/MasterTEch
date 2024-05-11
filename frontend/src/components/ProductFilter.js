@@ -1,6 +1,6 @@
 import React from 'react'
 import {NumberInput,NumberInputField,NumberInputStepper,NumberIncrementStepper,NumberDecrementStepper,FormControl,FormLabel} from "@chakra-ui/react"
-    const Filter = ({classac}) => {
+    const ProductFilter = ({classac}) => {
         
     return (
         <div className = {`filterarea ${classac}`}>
@@ -43,4 +43,4 @@ import {NumberInput,NumberInputField,NumberInputStepper,NumberIncrementStepper,N
     )
 }
  
-export default Filter
+export default ProductFilter

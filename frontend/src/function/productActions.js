@@ -16,7 +16,7 @@ import {
     PRODUCT_UPDATE_FAIL,
     PRODUCT_UPDATE_SUCCESS,
 
-} from '../constants/productConstants'
+} from '../ConsFunction/productConstants'
 export const listProducts =  (keyword = '') => async(dispatch) => {
     try {
         dispatch({type : PRODUCT_LIST_REQUEST})

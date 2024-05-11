@@ -7,9 +7,9 @@ import { Helmet } from 'react-helmet';
 import {useDispatch, useSelector} from 'react-redux'
 import { IoMdDoneAll } from 'react-icons/all';
 import HashLoader from "react-spinners/HashLoader";
-import { getOrderDetails, payOrder,deliverOrder } from "../../actions/orderActions";
+import { getOrderDetails, payOrder,deliverOrder } from "../../function/orderActions";
 import './Order.css'
-import { ORDER_PAY_RESET,ORDER_DELIVER_RESET } from '../../constants/orderConstants';
+import { ORDER_PAY_RESET,ORDER_DELIVER_RESET } from '../../ConsFunction/orderConstants';
 import { Button } from '@chakra-ui/button';
 const Order = ({match,history}) => {
     const [sdkReady, setsdkReady] = useState(false)
@@ -35,18 +35,7 @@ const Order = ({match,history}) => {
         if(!userInfo){
             history.push('/login')
         }
-        const addPaypalscript = async () =>{
-            const {data : clientId} = await axios.get('/api/config/paypal ') 
-            const script = document.createElement('script')
-            script.type = 'text/javascript'
-            script.async = true
-            script.src = `https://www.paypal.com/sdk/js?client-id=${clientId}`
-            script.onload = () =>{
-                setsdkReady(true)
-            }
-            document.body.appendChild(script)
 
-        }
         if(!order || successPay || successDeliver || order._id !== orderId){
             dispatch({
                 type:ORDER_PAY_RESET
@@ -56,11 +45,7 @@ const Order = ({match,history}) => {
             })
             dispatch(getOrderDetails(orderId))
         }else if(!order.isPaid){
-            if(!window.paypal){
-                addPaypalscript();
-            }else{
-                setsdkReady(true)
-            }
+
         }
         
     }, [dispatch,orderId,successPay,orderPay,successDeliver,userInfo])
@@ -155,7 +140,7 @@ const Order = ({match,history}) => {
                         )}
                         {userInfo && userInfo.isAdmin && order.isPaid && !order.isDelivered &&(
                             <Button   height="40px" width = "200px"
-                            size = "lg" onClick = {deliverhandler} leftIcon = {<IoMdDoneAll size = '16' />} colorScheme ='blue' size="xs" >DELIVERED</Button>
+                            size = "lg" onClick = {deliverhandler} leftIcon = {<IoMdDoneAll size = '16' />} colorScheme ='blue'  >DELIVERED</Button>
                         )}
 
                         </div>

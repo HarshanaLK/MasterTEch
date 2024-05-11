@@ -2,9 +2,7 @@ import asyncHandler from 'express-async-handler'
 
 import Product from '../models/productModel.js'
 
-// @desc Fetch all products
-// @route GET /api/products
-// @access Public
+
 const getProducts = asyncHandler(async (req, res) => {
     const Cg = req.query.Cg
     const filter = req.query.filter
@@ -62,38 +60,31 @@ const getProducts = asyncHandler(async (req, res) => {
 
 
 
-// @desc Fetch single  product
-// @route GET /api/products/:id
-// @access Public
+
 const getProductById = asyncHandler(async (req, res) => {
     const product =  await Product.findById(req.params.id)
     if(product){
         res.json(product)
     } else{
-        // status it's 500 by default cuz of errHandler
+        
         res.status(404)
         throw new Error('Product not found')
     }
 })
 
-// @desc Delete a product
-// @route GET /api/products/:id
-// @access Private/Admin
+
 const deleteProduct = asyncHandler(async (req, res) => {
     const product =  await Product.findById(req.params.id)
     if(product){
         await product.remove()
         res.json({message : 'Product Removed'})
     } else{
-        // status it's 500 by default cuz of errHandler
         res.status(404)
         throw new Error('Product not found')
     }
 })
 
-// @desc Create a product
-// @route Post /api/products
-// @access Private/Admin
+
 const createProduct = asyncHandler(async (req, res) => {
 
     const product = new Product({
@@ -112,9 +103,8 @@ const createProduct = asyncHandler(async (req, res) => {
     res.status(201).json(createProduct)
 })
 
-// @desc Update a product
-// @route PUT /api/products/:id
-// @access Private/Admin
+
+
 const updateProduct = asyncHandler(async (req, res) => {
     const {name,price,description,category,sizes,Images,countInStock} = req.body
     console.log(name,price,Images)
@@ -137,9 +127,7 @@ const updateProduct = asyncHandler(async (req, res) => {
     }
 })
 
-// @desc Create new Review
-// @route PUT /api/products/:id/reviews
-// @access Private
+
 const createproductreview = asyncHandler(async (req, res) => {
     const {rating,comment} = req.body
     const product = await Product.findById(req.params.id)
