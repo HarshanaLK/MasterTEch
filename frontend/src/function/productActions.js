@@ -110,13 +110,13 @@ export const DeleteProduct = (id) => async(dispatch, getState) => {
 
         const { userLogin: {userInfo} } = getState()
 
-        const config = {
+        const DBsetting = {
             headers:{
                 Authorization: `Bearer ${userInfo.token}`
             }
         }
 
-        await axios.delete(`/api/products/${id}`, config) 
+        await axios.delete(`/api/products/${id}`, DBsetting) 
         dispatch({
             type: PRODUCT_DELETE_SUCCESS,
                 })
@@ -143,13 +143,13 @@ export const CreateProduct = () => async(dispatch, getState) => {
 
         const { userLogin: {userInfo} } = getState()
 
-        const config = {
+        const DBsetting = {
             headers:{
                 Authorization: `Bearer ${userInfo.token}`
             }
         }
 
-        const {data} = await axios.post(`/api/products/`,{}, config) 
+        const {data} = await axios.post(`/api/products/`,{}, DBsetting) 
         dispatch({
             type: PRODUCT_CREATE_SUCCESS,
             payload : data
@@ -180,14 +180,14 @@ export const UpdateProduct = (product) => async(dispatch, getState) => {
 
         const { userLogin: {userInfo} } = getState()
 
-        const config = {
+        const DBsetting = {
             headers:{
                 'Content-Type' : 'application/json',
                 Authorization: `Bearer ${userInfo.token}`
             }
         }
 
-        const {data} = await axios.put(`/api/products/${product._id}`,product, config) 
+        const {data} = await axios.put(`/api/products/${product._id}`,product, DBsetting) 
         dispatch({
             type: PRODUCT_UPDATE_SUCCESS,
             payload : data
