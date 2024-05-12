@@ -1,7 +1,7 @@
 import express from 'express'
 const router = express.Router()
 import {getProducts, getProductById, deleteProduct,createProduct,updateProduct, createproductreview} from '../controlers/productControler.js'
-import { protect,admin } from '../middleware/authMiddleware.js'
+import { protect,admin } from '../API/authMiddleware.js'
 
 
 router.route('/').get(getProducts).post(protect,admin,createProduct)

@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductsC from '../components/ProductsC';
+import ProductsC from '../Elements/ProductsC';
 import  "./Shop.css";
 import { Helmet } from 'react-helmet';
 

@@ -1,8 +1,8 @@
 import React,{} from 'react'
-import Slide from '../components/Slide'
-import DisCard from '../components/DisCard'
-import ProDivC from '../components/ProDivC'
-import ProductsC from '../components/ProductsC'
+import Slide from '../Elements/Slide'
+import DisCard from '../Elements/DisCard'
+import ProDivC from '../Elements/ProDivC'
+import ProductsC from '../Elements/ProductsC'
 import { Helmet } from 'react-helmet';
 
 

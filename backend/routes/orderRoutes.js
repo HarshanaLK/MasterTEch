@@ -1,7 +1,7 @@
 import express from 'express'
 const router = express.Router()
 import { addorderitems, GetMyOrders, getOrderById, GetOrders, updateOrderToPaid,updateOrderToDelivered } from '../controlers/orderControler.js'
-import {protect,admin} from '../middleware/authMiddleware.js'
+import {protect,admin} from '../API/authMiddleware.js'
 
 
 router.route('/').post(protect,addorderitems).get(protect,admin,GetOrders)

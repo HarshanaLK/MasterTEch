@@ -1,4 +1,4 @@
-import NaviBar from './components/NaviBar'
+import NaviBar from './Elements/NaviBar'
 import Home from './pages/Home'
 import About from './pages/About/About'
 import Shop from './pages/Shop'
@@ -10,15 +10,15 @@ import LoginScreen from './pages/Login/LoginScreen'
 import React, {useState,useEffect} from 'react'
 import {BrowserRouter as Router , Switch ,Route } from 'react-router-dom'
 import { ChakraProvider } from "@chakra-ui/react"
-import ScrollIntoView from "./components/ScrollBar";
+import ScrollIntoView from "./Elements/ScrollBar";
 import HashLoader from "react-spinners/HashLoader";
-import RegUserDis from './components/RegUserDis'
-import CustomerDis from './components/CustomerDis'
+import RegUserDis from './Elements/RegUserDis'
+import CustomerDis from './Elements/CustomerDis'
 import Checkout from "./pages/checkout/Checkout";
 import Placeorder from './pages/placeorder/Placeorder'
 import Order from './pages/Order/Order'
 import Users from './pages/Userslist/Users'
-import NotFoundPage from './components/NoResult'
+import NotFoundPage from './Elements/NoResult'
 import Edituser from './pages/Useredit/Edituser'
 import Products from './pages/products/products'
 import ProEdit from './pages/ProEdit/ProEdit'

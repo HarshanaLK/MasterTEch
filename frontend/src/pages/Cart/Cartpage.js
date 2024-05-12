@@ -3,8 +3,8 @@ import { useEffect} from 'react';
 import { Helmet } from 'react-helmet';
 import { useDispatch,useSelector } from 'react-redux';
 import { addToCart } from '../../function/cartActions';
-import CartEmpty from '../../components/CartEmpty';
-import Procart from '../../components/Procart';
+import CartEmpty from '../../Elements/CartEmpty';
+import Procart from '../../Elements/Procart';
 import './cartcss.css'
 const Cartpage = ({match,location,history}) => {
     const {id} = match.params;

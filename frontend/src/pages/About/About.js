@@ -45,7 +45,7 @@ const About = () => {
             </div>
             <div className='Content1'>
                 <div className = 'text'>
-                    <p>We are dedicatd to build your dream PC by using quality components to fulfill the dreams fo our valued customers through proper customer support process. Founded in 2014 by Mahinda rajapakshe, Master Tech has come a long way from its beginnings in his home. When Mahinda first started out, his passion for "quality and affordable tech products" drove him to start this so that MasterTech can offer you latest products to your doorstep. We now serve customers all over Sri Lanka, and are thrilled that we're able to turn our passion into our own website. I hope you enjoy the products as much as I enjoy offering them to you. If you have any questions or comments, please don't hesitate to contact me.</p>
+                    <p>We are dedicatd to build your dream PC by using quality Elements to fulfill the dreams fo our valued customers through proper customer support process. Founded in 2014 by Mahinda rajapakshe, Master Tech has come a long way from its beginnings in his home. When Mahinda first started out, his passion for "quality and affordable tech products" drove him to start this so that MasterTech can offer you latest products to your doorstep. We now serve customers all over Sri Lanka, and are thrilled that we're able to turn our passion into our own website. I hope you enjoy the products as much as I enjoy offering them to you. If you have any questions or comments, please don't hesitate to contact me.</p>
                     <br></br>
                     <h1>Our Vision</h1>
                         <p>Providing a computer to everyone in Sri Lanka.</p>
