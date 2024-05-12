@@ -2,9 +2,9 @@ import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 import users from './data/users.js'
 import product from './data/products.js'
-import User from './models/userModel.js'
-import Product from './models/productModel.js'
-import Order from './models/orderModel.js'
+import User from './DataModules/userModel.js'
+import Product from './DataModules/productModel.js'
+import Order from './DataModules/orderModel.js'
 import connectDB from './DBsetting/db.js'
 
 
@@ -13,11 +13,11 @@ connectDB()
 
 const importData = async () => {
     try {
-        // empty all models 
+        // empty all DataModules 
        await Order.deleteMany()
        await Product.deleteMany()
        await User.deleteMany()
-       // Add data to models
+       // Add data to DataModules
         // select all users 
        const createUsers = await User.insertMany(users)
        // select admin user
@@ -36,7 +36,7 @@ const importData = async () => {
 }
 const destroyData = async () => {
     try {
-        // empty all models 
+        // empty all DataModules 
        await Order.deleteMany()
        await Product.deleteMany()
        await User.deleteMany()
