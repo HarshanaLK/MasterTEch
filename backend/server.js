@@ -3,9 +3,9 @@ import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import morgan from "morgan";
-import userRoutes from "./routes/userRoutes.js";
-import orderRoutes from "./routes/orderRoutes.js";
-import productRoutes from "./routes/productRoutes.js";
+import userRoutes from "./paths/userRoutes.js";
+import orderRoutes from "./paths/orderRoutes.js";
+import productRoutes from "./paths/productRoutes.js";
 
 import { notFound, errorHandler } from "./API/errorMiddleware.js";
 
