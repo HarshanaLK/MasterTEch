@@ -3,6 +3,10 @@ import {FiFacebook, AiOutlineInstagram, IoLogoYoutube} from 'react-icons/all';
 import { Input,Stack } from '@chakra-ui/react'
 import './footercss.css'
 import { Link } from 'react-router-dom';
+import { FaTiktok } from "react-icons/fa6";
+
+
+
 const Footer = () => {
     return (
         <div className="footerCmp">
@@ -27,7 +31,7 @@ const Footer = () => {
                             <FiFacebook size="25" />
                         </li>
                         <li className="footerIcons">  
-                            <AiOutlineInstagram size="25" />
+                            < FaTiktok size="25" />
                         </li>
                         <li className="footerIcons">
                             <IoLogoYoutube size="25"/>
@@ -51,7 +55,7 @@ const Footer = () => {
 
                 <div className="creditsIcons">
                     <ul>
-                        <li><img src="https://i.imgur.com/AHCoUZO.png" className="img1"/></li>
+                        <li><img src="https://i.imgur.com/w1K88XP.png" className="img1"/></li>
                         <li><img src="https://i.imgur.com/l8OAGyo.png" className="img3" /></li>
                     </ul>
                     
