@@ -42,15 +42,7 @@ const Cartpage = ({match,location,history}) => {
 
         </div>
         <div className = 'totalcart'>
-            <h3>
-            Subtotal ({cartItems.reduce((acc,item)=>acc+item.qty,0)} items) :
-            </h3>
-            <h3 className = 'totalprice'>
-            {cartItems.reduce((acc,item )=>
-                acc + item.qty * item.price,0
 
-             ).toFixed(2)} LKR
-            </h3>
 
 
             <h3 className = 'totalprice'>Total :</h3>
