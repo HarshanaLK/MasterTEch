@@ -1,19 +1,19 @@
 .placeorder {
   margin: 15px 30px;
-  margin-top: 80px;
+  margin-top: 60px;
   height: 450px;
-
   display: grid;
   grid-template-columns: repeat(autofit, minmax(50%, 1fr));
-
   row-gap: 8px;
   padding: 30px;
   height: auto;
 }
 .informations-placeorder {
-  background-color: rgba(248, 248, 248, 0.25);
+  background-color: rgba(82, 78, 78, 0.288);
   width: 100%;
   padding-left: 20px;
+  color: #fff;
+  border-radius: 30px;
 }
 .informations-placeorder h2 {
   margin: 15px 0;
@@ -42,7 +42,8 @@
   font-weight: 700;
 }
 .cart-summ {
-  background-color: #fafafa;
+  background-color: rgba(0, 0, 0, 0.308);
+  color: #fff;
 }
 .cart-summ h1 {
   font-size: 26px;
@@ -50,19 +51,17 @@
 }
 .placeorder-btn {
   display: block;
-  width: 50%;
-
+  width: 60%;
   height: 50px;
   border-radius: 25px;
   outline: none;
   border: none;
-  background-image: linear-gradient(to right, #646f92, #403985, #241fac);
+  background-color: #04bdf5;
   background-size: 200%;
   font-size: 1.2rem;
   color: #fff;
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
-
   cursor: pointer;
   transition: 0.5s;
 }

@@ -56,7 +56,7 @@ const Footer = () => {
                 <div className="creditsIcons">
                     <ul>
                         <li><img src="https://i.imgur.com/w1K88XP.png" className="img1"/></li>
-                        <li><img src="https://i.imgur.com/l8OAGyo.png" className="img3" /></li>
+                        <li><img src="https://i.imgur.com/Y9KTTTG.png" className="img3" /></li>
                     </ul>
                     
                 </div>

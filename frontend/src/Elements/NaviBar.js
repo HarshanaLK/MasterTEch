@@ -5,7 +5,6 @@ import {Link, NavLink } from 'react-router-dom'
 import { Button, Input,InputGroup,Menu, MenuButton, MenuItem, MenuList} from "@chakra-ui/react"
 import {RiShoppingCart2Line,IoCloseOutline,MdSearch,BsArrowRightShort,MdKeyboardArrowRight,IoLogOutOutline,CgProfile, IoChevronDownCircleOutline, IoMdArrowDropdown} from "react-icons/all"
 import {logout} from '../function/userActions'
-import { keyword } from 'color-convert'
 import NaviSearch from './NaviSearch';
 import logoImage from './logo.png';
 

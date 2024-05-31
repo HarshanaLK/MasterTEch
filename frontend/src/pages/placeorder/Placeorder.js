@@ -67,13 +67,9 @@ const Placeorder = ({history}) => {
                     <h2>Order Items: </h2>
                    {cart.cartItems.length === 0 ? <p>Your cart is empty</p>:
                         <div className="orders-placeorder">
-                        {cart.cartItems.map((item, index) => (
-                                
-                            <p><span className="color-name"><Link to={`/product/${item.product}`}>{item.name}</Link></span> <b>{item.qty} x ${item.price} = ${item.qty * item.price}</b><hr /></p>
-                          
-
-                        ))}
-                            
+                        {cart.cartItems.map((item, index) => (     
+                            <p><span className="color-name"><Link to={`/product/${item.product}`}>{item.name}</Link></span> <b>{item.qty} x {item.price}.LKR = {item.qty * item.price}.LKR</b><hr /></p>
+                        ))}    
                     </div>
                    }    
                 </div>
@@ -83,12 +79,10 @@ const Placeorder = ({history}) => {
                         
                         <div className="cart-summ">
                             <h1>Order Summary</h1>
-                            
-                                    <div className="calculs-placeorder">
-                                <h3>Items: </h3><p>${cart.itemsPrice}</p>
-                                <h3>Shipping: </h3><p>${cart.shippingPrice}</p>
-                                <h3>Tax: </h3><p>${cart.taxPrice}</p>
-                                <h3>Total: </h3><p>${cart.totalPrice}</p>
+                                <div className="calculs-placeorder">
+                                <h3>Items: </h3><p>{cart.itemsPrice}LKR</p>
+                                <h3>Shipping: </h3><p>{cart.shippingPrice}LKR</p>
+                                <h3>Total: </h3><p>{cart.totalPrice}LKR</p>
                                 <div className="div-placeorder-btn"> 
                                     <button className="placeorder-btn" onClick = {Placeorderhanlder}>Place Order</button>
                                     {error && error}
