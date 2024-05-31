@@ -31,6 +31,7 @@ const Orders = ({history}) => {
     },[dispatch,history,userInfo])
 
     return (
+
         <div className = 'Users'>
             <Helmet>
                 <title>Orders</title>
@@ -40,14 +41,14 @@ const Orders = ({history}) => {
                      <HashLoader   color={"#1e1e2c"}  loading={loading} size={40} />
                    </div> : 
                    error ? <h1>error</h1> :
-                   <Box overflowX = 'auto'>
-                   <Table  className = 'tableusers' variant="striped" >
-                       <Thead backgroundColor={"#90d1e8"}>
-                        <Tr>
-                            <Th w = '25%'>ID</Th>
-                            <Th  w = '25%'>User</Th>
-                            <Th  w = '25%'>Date</Th>
-                            <Th  w = '25%'>TOTAL</Th>
+                   <Box overflowX = 'auto' borderRadius='18px' border ='2px solid #e2e8f0'>
+                   <Table  className = 'tableusers'  >
+                       <Thead className = 'table-header' >
+                        <Tr >
+                            <Th color= "#fff"  w = '25%'>ID</Th>
+                            <Th color= "#fff"  w = '25%'>User</Th>
+                            <Th color= "#fff"  w = '25%'>Date</Th>
+                            <Th color= "#fff"  w = '25%'>TOTAL</Th>
                         </Tr>
                       </Thead>
                       <Tbody >

@@ -66,7 +66,6 @@ import Orders from './pages/Orders/Orders'
                  <Route path="/search/:keyword" component={Shop}/>
                  <Route path="/admin/user/:id/edit" component={Edituser}/>
                  <Route path="/admin/product/:id/edit" component={ProEdit}/>
-
                  <Route component={NotFoundPage} />
 
                  </Switch>
