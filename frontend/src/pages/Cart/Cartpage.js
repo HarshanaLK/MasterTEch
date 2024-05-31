@@ -14,7 +14,6 @@ const Cartpage = ({match,location,history}) => {
     const {cartItems} = cart
 
     useEffect(()=>{
-
         if(id){
             dispatch(addToCart(id,qty))}
     },[dispatch,id,qty])
