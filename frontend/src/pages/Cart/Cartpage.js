@@ -42,9 +42,6 @@ const Cartpage = ({match,location,history}) => {
 
         </div>
         <div className = 'totalcart'>
-
-
-
             <h3 className = 'totalprice'>Total :</h3>
             <h3 className = 'totalprice'>
             {cartItems.reduce((acc,item )=>
