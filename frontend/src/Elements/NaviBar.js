@@ -2,7 +2,7 @@ import React , {useRef,useState,useEffect} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import { Route } from 'react-router-dom';
 import {Link, NavLink } from 'react-router-dom'
-import { Button, Input,InputGroup,Menu, MenuButton, MenuItem, MenuList} from "@chakra-ui/react"
+import { Button, Menu, MenuButton, MenuItem, MenuList} from "@chakra-ui/react"
 import {RiShoppingCart2Line,IoCloseOutline,MdSearch,BsArrowRightShort,MdKeyboardArrowRight,IoLogOutOutline,CgProfile, IoChevronDownCircleOutline, IoMdArrowDropdown} from "react-icons/all"
 import {logout} from '../function/userActions'
 import NaviSearch from './NaviSearch';
@@ -15,15 +15,11 @@ import logoImage from './logo.png';
     const[nav,setNav]=useState(false)
     const NaviBar = useRef(null)
 
-
-     //search
      const searchRef = useRef(null)
      const [showSearchIc,setShowSearchIc] = useState(false)
-     //Burger
      const Buric = useRef(null)
      const navLinks = useRef(null)
      const rightItems = useRef(null)
-     //signin
      const [signin,setSignin] = useState(null)
 
 
@@ -33,26 +29,25 @@ import logoImage from './logo.png';
      const onSeacrhFun= () =>
         {
 
-                //Search Icon state + Bar
-            setShowSearchIc(!showSearchIc) //false
+            setShowSearchIc(!showSearchIc) 
             console.log(showSearchIc)
             searchRef.current.classList.toggle('searchActive')
             searchRef.current.style.animation = 'moving 0.3s ease both 0.3s'
         }  
         const onDelSeacrh =  () =>{
             
-            setShowSearchIc(!showSearchIc) //true
+            setShowSearchIc(!showSearchIc)
             searchRef.current.classList.toggle('searchActive')
 
         }
 
         const onBurgActive = () =>{
-            //Toggle NaviBar
+        
 
             const links = document.querySelectorAll('.navLinks li')
             navLinks.current.classList.toggle('burgerActive')
             rightItems.current.classList.toggle('burgerActive')
-            //Animate Links
+     
             links.forEach((link,index) => {
              if(link.style.animation)
                   {
@@ -60,8 +55,7 @@ import logoImage from './logo.png';
                         rightItems.current.style.animation = "";
                    }
                 else 
-                { 
-                       
+                {         
                         link.style.animation = `moving 0.5s ease forwards ${index / 5 }s`
                         rightItems.current.style.animation = `moving 0.5s ease forwards ${index / 5 }s`
                        
@@ -109,15 +103,11 @@ import logoImage from './logo.png';
             <div className="burger" ref= {Buric} onClick = {onBurgActive} >
                 <div className='line1'></div>
                 <div className='line2'></div>
-                <div className='line3'></div>
-                
             </div>
         <div className = "rightComp" ref = {rightItems}>
         <div  ref={searchRef} className="search">
         <Route render={({history}) => <NaviSearch history ={history}/>}/>
-
         </div>
-
 
                 { !showSearchIc && <MdSearch className='iconSearch' size='25' onClick={onSeacrhFun}/>  }
                 <Link to='/cart' > <RiShoppingCart2Line className='iconCart' size='25' />
@@ -138,24 +128,34 @@ import logoImage from './logo.png';
 
                         </div>
                         </Link>}
+                        
                         {userInfo && userInfo.isAdmin && (
-                            <Menu>
-                                  <MenuButton as = {Button}  rightIcon={<IoMdArrowDropdown />}>
+                            <Menu >
+                                  <MenuButton as = {Button}  rightIcon={<IoMdArrowDropdown />} style={{ backgroundColor: 'rgba(82, 78, 78, 0.288)', color: 'white' } }   
+                                    px={4}
+                                    py={2}
+                                    transition='all 0.2s'
+                                    borderRadius='md'
+                                    borderWidth='1px'
+                                    _hover={{ bg: 'gray.400' }}
+                                    _expanded={{ bg: 'blue.400' }}
+                                    _focus={{ boxShadow: 'outline' }}
+                                    >
                                       Admin
                                   </MenuButton>
-                                  <MenuList>
-                                  <MenuItem>
-                                  <Link to = '/admin/productlist'>
-                                        Products
-                                  </Link>
-                                  </MenuItem>
-                                  <MenuItem>
-                                  <Link to = '/admin/orderlist'>
-                                        Orders
-                                  </Link>
-                                  </MenuItem>
-                                  </MenuList>
 
+                                  <MenuList style={{ backgroundColor: 'rgba(82, 78, 78, 0.288)', color: 'white', padding: '0', margin: '0' }} borderRadius='10px'>
+                                    <MenuItem _hover={{ bg: '#04bdf5' }} borderRadius='10px 10px 0 0' style={{ margin: '0', padding: '0' }}>
+                                        <Link to='/admin/productlist' style={{ display: 'block', width: '100%', padding: '8px' }}>
+                                            Products
+                                        </Link>
+                                    </MenuItem>
+                                    <MenuItem _hover={{ bg: '#04bdf5' }} borderRadius='0 0 10px 10px' style={{ margin: '0', padding: '0' }}>
+                                        <Link to='/admin/orderlist' style={{ display: 'block', width: '100%', padding: '8px' }}>
+                                            Orders
+                                        </Link>
+                                        </MenuItem>
+                                    </MenuList>
                             </Menu>
                         )}
             

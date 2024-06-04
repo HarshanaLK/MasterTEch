@@ -188,6 +188,10 @@ nav {
   color: #cccccc;
 }
 
+.custom-button{
+  background-color: #04bdf5;
+}
+
 .burger {
   display: none;
   cursor: pointer;
@@ -601,11 +605,8 @@ nav {
   display: grid;
   margin: 35px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  /* justify-content: space-around; */
   column-gap: 10px;
   row-gap: 50px;
-  /* margin-left: 120px; */
-  /* margin-right: 125px; */
 }
 .cardProduct {
   box-shadow: 0 5px 5px -1px rgba(0, 0, 0, 0.2);
@@ -706,9 +707,9 @@ nav {
 
 
 
-/* ****************************************** */
 
-/******************************MEDIA **********/
+
+/********Responsive Media tags **********/
 @media screen and (max-width: 1280px) {
 
   .navLinks {
