@@ -24,7 +24,7 @@ const Footer = () => {
       
 
                 <div className="footerGetInTouch">
-                    <h1>Get in touch</h1>
+                    <h1>Reach Us</h1>
                     <ul>
                         <p>Any questions? Let us know in store at Kurunegale Tel:0371234567</p>
                         <li className="footerIcons">

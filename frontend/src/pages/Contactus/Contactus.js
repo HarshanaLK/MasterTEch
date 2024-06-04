@@ -67,7 +67,7 @@ const Contactus = () => {
                     <div className="adressCtn">
 
                         <h3> Address</h3>
-                        <p>MC Plaza, 12 2nd Floor, Kurunegala 60000</p>
+                        <p>MC Plaza, 12, 2nd Floor, Kurunegala 60000</p>
                     </div>
                 </div>
                     <div className="box">
