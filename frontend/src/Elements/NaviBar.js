@@ -3,7 +3,7 @@ import {useSelector, useDispatch} from 'react-redux'
 import { Route } from 'react-router-dom';
 import {Link, NavLink } from 'react-router-dom'
 import { Button, Menu, MenuButton, MenuItem, MenuList} from "@chakra-ui/react"
-import {RiShoppingCart2Line,IoCloseOutline,MdSearch,BsArrowRightShort,MdKeyboardArrowRight,IoLogOutOutline,CgProfile, IoChevronDownCircleOutline, IoMdArrowDropdown} from "react-icons/all"
+import {RiShoppingCart2Line,IoSearchCircleOutline,BsArrowRightShort,MdKeyboardArrowRight,AiOutlineLogout,CgProfile, IoMdArrowDropdown,TiShoppingCart,FaUserCog } from "react-icons/all"
 import {logout} from '../function/userActions'
 import NaviSearch from './NaviSearch';
 import logoImage from './logo.png';
@@ -55,10 +55,9 @@ import logoImage from './logo.png';
                         rightItems.current.style.animation = "";
                    }
                 else 
-                {         
+                    {         
                         link.style.animation = `moving 0.5s ease forwards ${index / 5 }s`
                         rightItems.current.style.animation = `moving 0.5s ease forwards ${index / 5 }s`
-                       
                     }
             });
 
@@ -109,8 +108,8 @@ import logoImage from './logo.png';
         <Route render={({history}) => <NaviSearch history ={history}/>}/>
         </div>
 
-                { !showSearchIc && <MdSearch className='iconSearch' size='25' onClick={onSeacrhFun}/>  }
-                <Link to='/cart' > <RiShoppingCart2Line className='iconCart' size='25' />
+                { !showSearchIc && <IoSearchCircleOutline className='iconSearch' size='25' onClick={onSeacrhFun}/>  }
+                <Link to='/cart' > <TiShoppingCart className='iconCart' size='25' />
                 {userInfo && !userInfo.isAdmin && 
                 <div className='dotcart'>
                     {incart}
@@ -119,8 +118,8 @@ import logoImage from './logo.png';
 
                  </Link>
 
-                            {userInfo ? (<div className="ic_sett_dis"><Link to="/profile"><CgProfile size="25" className="settingIcon"/></Link>
-                                <IoLogOutOutline size='28' className="displayIcon" onClick={logoutHandler}/>
+                            {userInfo ? (<div className="ic_sett_dis"><Link to="/profile"><FaUserCog  size="25" className="settingIcon"/></Link>
+                                <AiOutlineLogout size='28' className="displayIcon" onClick={logoutHandler}/>
                                 </div>
                                 
                             ) : <Link to='/login' > <div className='signin' onMouseOver={ () => setSignin(!signin)}  onMouseOut={ ()=> setSignin(!signin) }  > Sign in 
