@@ -343,6 +343,8 @@ nav {
   
 }
 
+
+
 /* Animation rotate card */
 .cards {
   display: grid;
@@ -350,9 +352,7 @@ nav {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   column-gap: 50px;
   row-gap: 20px;
-  
 }
-
 
 .cardscg {
   width: 100%;
@@ -363,8 +363,8 @@ nav {
   box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.2);
   grid-template-rows: 70% 30%;
   border-radius: 20px;
- 
 }
+
 .cardscg h1 {
   font-size: 30px;
   font-weight: 600;
@@ -373,14 +373,7 @@ nav {
   color: white;
 }
 
-.cardscg:hover .ShopNowcg {
-  position: relative;
-  transition: 0.5s all ease;
-  opacity: 1;
-  align-self: center; /*Vertical */
-  justify-self: start; /*Horizontal */
-  transform: translateY(-50px);
-}
+
 .cardscg:hover {
   transform: scale(1.1);
   box-shadow: 0 20px 20px 20px rgba(0, 0, 0, 0.5);
