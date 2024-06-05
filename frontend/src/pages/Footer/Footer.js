@@ -43,29 +43,18 @@ const Footer = () => {
                     <h1>Contact Us</h1>
                     <ul>
                         <li>
-                            <Stack spacing={3}>
-                            <Input variant="flushed" placeholder="email@example.com" size="10" width="200px"/>
-                            </Stack>
+                        0371234567
                         </li>
                         <li>
-                            <button className="footerBtn">Subscribe</button>
+                        MC Plaza, 12, 2nd Floor, Kurunegala 60000
+                        </li>
+                        <li>
+                        info@Mastertech.lk
                         </li>
                     </ul>
                 </div>
-
-                <div className="creditsIcons">
-                    <ul>
-                        <li><img src="https://i.imgur.com/w1K88XP.png" className="img1"/></li>
-                        <li><img src="https://i.imgur.com/Y9KTTTG.png" className="img3" /></li>
-                    </ul>
-                    
-                </div>
-                
                 <div className="paragraphFooter"><p>Copyright ©2024 All rights reserved by MasterTech</p>
                 </div>
-
-
-
             </footer>
 
         </div>

@@ -23,11 +23,6 @@ const Home = () => {
             </Helmet>
             <div>
                 <Slide />
-                <div className="cards">
-                    <DisCard title='Desktop' />
-                    <DisCard title='Laptop' />
-                    <DisCard title='Accessories' />
-                </div>
                 <ProDivC />
                 <ProductsC />
             </div>
