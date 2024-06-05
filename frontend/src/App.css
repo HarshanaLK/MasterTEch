@@ -77,8 +77,6 @@ nav {
   margin-right: 60px;
 }
 
-
-
 .nav.active {
   background: rgba(42, 47, 54, 0.763);
   box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.4);
@@ -86,40 +84,41 @@ nav {
 .activenav {
   border-bottom: 0.1px #cccccc solid;
 }
+
 .navLinks {
   width: 100%;
   list-style: none;
   justify-content: space-around;
   display: flex;
-  font-weight: 600;
   color: #cccccc;
-
 }
-.navLinks li {
-  font-size: 1em;
+
+button{
+  background-color: #050801;
+  color: #03e9f4;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  overflow: hidden;
+  transition: 0.5s;
   cursor: pointer;
 }
-.navLinks li::after {
-  content: "";
-  display: block;
-  width: 0px;
-  height: 6px;
-  background: #04bdf5;
-  transition: width 0.3s;
+
+button:hover{
+    padding: 10px 10px;
+    border-radius: 15px;
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+
+     
+     
 }
-.activlink li::after {
-  content: "";
-  display: block;
-  width: 0px;
-  height: 6px;
-  background: #04bdf5;
-  transition: width 0.3s;
-  width: 100%;
-}
-.navLinks li:hover::after {
-  width: 100%;
-  transition: width 0.3s;
-}
+
 .search {
   display: none;
 }

@@ -93,12 +93,14 @@ import logoImage from './logo.png';
            <div className="barLogo">
             <Link to =''><img src={logoImage} alt="MasterTech Logo" /></Link>
            </div>
-            <ul className="navLinks" ref= {navLinks}>
-                <NavLink to="/" exact  activeClassName='activlink' ><li>Home</li></NavLink>
-                <NavLink to="/shop" activeClassName='activlink' ><li>Store</li></NavLink>
-                <NavLink to="/about" activeClassName='activlink'><li>About us</li></NavLink>  
-                <NavLink to="/contactus"activeClassName='activlink' ><li>Contact us</li></NavLink>
+
+           <ul className="navLinks" ref={navLinks}>
+            <NavLink to="/" ><button>Home</button></NavLink>
+            <NavLink to="/shop"><button>Store</button></NavLink>
+            <NavLink to="/about"><button>About us</button></NavLink>  
+            <NavLink to="/contactus"><button>Contact us</button></NavLink>
             </ul>
+
             <div className="burger" ref= {Buric} onClick = {onBurgActive} >
                 <div className='line1'></div>
                 <div className='line2'></div>
