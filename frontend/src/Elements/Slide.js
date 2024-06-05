@@ -62,8 +62,8 @@ const Slide = () => {
                 );
  
             })}
-            <IoIosArrowForward className ='next' size ='32' onClick = {nextslide}/>
-            <IoIosArrowBack className = 'prev' size ='32' onClick = {prevslide}/>
+            <IoIosArrowForward className ='next' size ='40' onClick = {nextslide}/>
+            <IoIosArrowBack className = 'prev' size ='40' onClick = {prevslide}/>
         </div>
     )
 }
