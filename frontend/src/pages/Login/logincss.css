@@ -98,7 +98,7 @@ form {
   bottom: -2px;
   width: 0%;
   height: 2px;
-  background-color: #04bdf5;
+  background-color: #03e9f4;
   transition: 0.4s;
 }
 .Message {
@@ -161,7 +161,7 @@ form {
   border-radius: 30px;
   outline: none;
   border: none;
-  background-color: #04bdf5;
+  background-color: #03e9f4;
   background-size: 200%;
   font-size: 1.2rem;
   color: #fff;

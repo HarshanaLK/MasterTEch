@@ -57,7 +57,7 @@ const Contactus = () => {
                         <Textarea value = {body} onChange = {e=> setbody(e.target.value)} width="450px" color="white"  placeholder="How Can We Help" height="200px" />
                     </div>
                     <div className="contentContact">
-                        <Button onClick = {handlesubmit} borderRadius="90px" backgroundColor="#0071dc" size="180px" className="contactBtn">Submit</Button>
+                        <Button onClick = {handlesubmit} borderRadius="90px" backgroundColor="#03e9f4" size="180px" className="contactBtn">Submit</Button>
                     </div>
 
             </div>
