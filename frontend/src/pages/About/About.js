@@ -39,9 +39,7 @@ const About = () => {
 
 
             <div className='headingA' >
-                <div className = 'line' ref={Line}>
-                </div>
-                <h1 className ='title' ref={text}>About Us</h1>
+
             </div>
             <div className='Content1'>
                 <div className = 'text'>
