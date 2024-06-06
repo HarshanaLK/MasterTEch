@@ -101,9 +101,15 @@ useEffect(()=>{
  
         <div className = "product-content">
           <h2 className = "product-title">{product.name} </h2>
-          <div className = "product-price">
-            <p className = "price">Price: &nbsp;<span>{product.price} LKR</span></p>
-          </div>
+          <div className="product-price">
+  <p className="price">Price: &nbsp;
+                  <span>
+                    {new Intl.NumberFormat('en-US', {
+                      style: 'decimal'
+                    }).format(product.price)} LKR
+                  </span>
+                </p>
+              </div>
           
           <div className = "product-detail">
             <h2>Product Details: </h2>

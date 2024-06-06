@@ -1,6 +1,7 @@
 import mongoose from 'mongoose'
 
 
+
 const reviewSchema = mongoose.Schema({
     name : { type: String, required: true},
     rating : { type: Number, required: true},
@@ -36,9 +37,10 @@ const productSchema = mongoose.Schema({
     }],
 
     price:{
-        type : String,
+        type :Number,
         required: true,
         default: 0
+
     },
     countInStock:{
         type : Number,
