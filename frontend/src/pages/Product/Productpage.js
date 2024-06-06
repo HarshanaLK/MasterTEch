@@ -88,12 +88,12 @@ useEffect(()=>{
             </div>
             <div className = "img-item">
               <a href = "#" data-id = "2">
-                <Image  objectFit="cover" boxSize = '200px' src = {product.images[1]} />
+                <Image objectFit="cover" boxSize = '200px' src = {product.images[1]} />
               </a>
             </div>
             <div className = "img-item">
               <a href = "#" data-id = "3">
-                <Image  objectFit="cover"  boxSize = '200px' src = {product.images[2]} />
+                <Image   boxSize = '200px' src = {product.images[2]} />
               </a>
             </div>
           </div>
