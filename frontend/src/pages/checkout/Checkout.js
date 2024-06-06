@@ -77,11 +77,19 @@ const Checkout = ({history}) => {
                     <div class="your-products">
                     <h1> Your Items</h1> : 
                     <>
-                        <div className="cart-summ">
-                            {cart.cartItems.map((item,index)=>(
-                            <p key = {index}>{item.qty} X <Link to={`/product/${item.product}`}>{item.name}</Link> <b>{item.qty * item.price}.LKR</b></p>
-                            ))}
-                        </div>
+                    <div className="cart-summ">
+    {cart.cartItems.map((item, index) => (
+        <p key={index}>
+            {item.qty} X <Link to={`/product/${item.product}`}>{item.name}</Link>{" "}
+            <b>
+                {new Intl.NumberFormat("en-US", {
+                    style: "currency",
+                    currency: "LKR"
+                }).format(item.qty * item.price)}
+            </b>
+        </p>
+    ))}
+</div>
                     </>
                 
                     </div>

@@ -37,8 +37,8 @@ const Procart = ({product}) => {
                 </div>
                 <div className = 'qtyoption' >
                 <h1>
-                {(qty === 0 ? product.qty*product.price : qty*product.price).toFixed(2)} LKR
-                </h1>
+{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'LKR' }).format((qty === 0 ? product.qty * product.price : qty * product.price).toFixed(2))}
+</h1>
                 </div>
                 <VscChromeClose className = 'deletecart' size = '26' onClick = {() => removeFromCartHandler(product.product)} />
 

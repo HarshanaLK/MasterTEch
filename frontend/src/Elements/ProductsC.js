@@ -65,7 +65,7 @@ const ProductsC = ({match,history}) => {
                     <Link className = 'lined' to = '?cg'>All</Link>
                     <Link className = 'lined'  to = '?cg=Dekstop'>Dekstop</Link>
                     <Link className = 'lined'  to = '?cg=Laptop'>Laptops</Link>
-                    <Link className = 'lined'  to = '?cg=Used'>Used Parts</Link>
+                    <Link className = 'lined'  to = '?cg=UsedPart'>Used Parts</Link>
                     <Link className = 'lined' to = '?cg=Software'>Software</Link>
                     <Link to = '?cg=Accessories' className = 'lined'>Accessories</Link>
             </ul>

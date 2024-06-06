@@ -513,7 +513,7 @@ button:hover{
   display: block;
   width: 0;
   height: 5px;
-  background: #04bdf5;
+  
   transition: width 0.3s;
 }
 .lined:hover::after {
