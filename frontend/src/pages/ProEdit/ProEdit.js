@@ -63,10 +63,7 @@ const ProEdit = ({match,history}) => {
                 setUsedPartselected(category.includes("UsedPart"))
                 setSoftwareselected(category.includes("Software"))
                 setAccessoriesselected(category.includes("Accessories"))
-
-
-
-              }
+                }
         }
 
       
@@ -116,7 +113,9 @@ const ProEdit = ({match,history}) => {
 
             
                {error && <h4>{error}</h4>}
-               {/* {successUpdate && <h4>Profile Updated</h4>} */}
+               {
+                
+               }
                {loading || lodingUpdate ? 
                         <div className='loading'>
                             <HashLoader   color={"#1e1e2c"}  loading={lodingUpdate} size={40} />
@@ -131,12 +130,10 @@ const ProEdit = ({match,history}) => {
                 <div >
                 <div className="input-div zz">
                 Name :
-
                    <div className="div">
                        
                    <InputGroup>
-
-                      <Input type="text" value={name}  placeholder="Enter name"  onChange={(e) => setName(e.target.value)}/>
+                      <Input type="text"   placeholder="Enter name"  onChange={(e) => setName(e.target.value)}/>
                    </InputGroup>
            		   </div>
            		</div>
@@ -144,22 +141,18 @@ const ProEdit = ({match,history}) => {
 
            		<div className="input-div one">
                    Price :
-
            		   <div className="div">
-
            		   		<InputGroup>
-                              <Input  type="text" value={price} placeholder="Enter price" onChange={(e) => setprice(e.target.value)} />
-                         </InputGroup>
-                         
+                              <Input  type="text"  placeholder="Enter price" onChange={(e) => setprice(e.target.value)} />
+                         </InputGroup>                        
            		   </div>
                   
            		</div>
                    <div className="input-div one">
                    countInStock :
-
            		   <div className="div">
            		   		<InputGroup>
-                              <Input  type="text" value={countInStock} placeholder="Enter price" onChange={(e) => setcountInStock(e.target.value)} />
+                              <Input  type="text"  placeholder="Enter stock count" onChange={(e) => setcountInStock(e.target.value)} />
                          </InputGroup>
                          
            		   </div>
@@ -170,7 +163,7 @@ const ProEdit = ({match,history}) => {
            		   <div className="div">
                           <Stack direction = 'column' spacing={4}>
                           <InputGroup>
-                              <Textarea size = 'sm' value={description}  placeholder="Enter price" onChange={(e) => setdescription(e.target.value)} />
+                              <Textarea size = 'sm'   placeholder="Enter Description" onChange={(e) => setdescription(e.target.value)} />
                          </InputGroup>
                          <Stack direction="row">
                       <Checkbox onChange = {() =>{checkboxhandlercg('Dekstop');setDekstopselected(!Dekstopselected)}} isChecked = {Dekstopselected}>Dekstop </Checkbox>
@@ -178,10 +171,8 @@ const ProEdit = ({match,history}) => {
                       <Checkbox onChange = {() =>{checkboxhandlercg('UsedPart'); setUsedPartselected(!UsedPartselected)}} isChecked = {UsedPartselected}>UsedParts </Checkbox>
                       <Checkbox onChange = {() =>{checkboxhandlercg('Software') ; setSoftwareselected(!Softwareselected)}} isChecked = {Softwareselected}>Software </Checkbox>
                       <Checkbox onChange = {() =>{checkboxhandlercg('Accessories') ; setAccessoriesselected(!Accessoriesselected)}} isChecked = {Accessoriesselected}>Accessories </Checkbox>
-
                       </Stack>
-  
-                          </Stack>
+                    </Stack>
                           
           
            		   </div>
@@ -207,9 +198,9 @@ const ProEdit = ({match,history}) => {
 
                       <Box>
                          <Stack direction ='column' >
-                            <Input type= 'text' value={Url1} onChange = {(e)=>{setUrl1(e.target.value)}}/>
-                            <Input type= 'text' value={Url2} onChange = {(e)=>{setUrl2(e.target.value)}}/>
-                            <Input type= 'text' value={Url3} onChange = {(e)=>{setUrl3(e.target.value)}}/>
+                            <Input type= 'text' placeholder="Product URL 1"  onChange = {(e)=>{setUrl1(e.target.value)}}/>
+                            <Input type= 'text' placeholder="Product URL 2" onChange = {(e)=>{setUrl2(e.target.value)}}/>
+                            <Input type= 'text' placeholder="Product URL 3" onChange = {(e)=>{setUrl3(e.target.value)}}/>
                          </Stack> 
                          </Box>
                       {/* <Input type= 'text' value={category} onChange = {(e)=>{setcategory((e.target.value).split(' ')) ; }}/> */}

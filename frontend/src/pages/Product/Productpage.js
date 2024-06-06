@@ -52,7 +52,6 @@ useEffect(()=>{
 ,[dispatch,match,successProductReview])
 
 
-  //Handler of button add to cart
   const addToCartHandler = () =>{
     history.push(`/cart/${match.params.id}?qty=${qty}`)
   }
@@ -84,25 +83,19 @@ useEffect(()=>{
           <div className = "img-select">
             <div className = "img-item">
               <a href = "#" data-id = "1">
-                <Image  objectFit="cover" boxSize = '200px' src = {product.images[0]} alt = "productTmage"/>
-
-
+                <Image  objectFit="cover" boxSize = '200px' src = {product.images[0]} />
               </a>
             </div>
             <div className = "img-item">
               <a href = "#" data-id = "2">
-                <Image  objectFit="cover" boxSize = '200px' src = {product.images[1]} alt = "productTmage"/>
-
+                <Image  objectFit="cover" boxSize = '200px' src = {product.images[1]} />
               </a>
             </div>
             <div className = "img-item">
               <a href = "#" data-id = "3">
-                <Image  objectFit="cover"  boxSize = '200px' src = {product.images[2]} alt = "productTmage"/>
-
-
+                <Image  objectFit="cover"  boxSize = '200px' src = {product.images[2]} />
               </a>
             </div>
-        
           </div>
         </div>
  
