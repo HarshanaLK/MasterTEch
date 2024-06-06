@@ -39,8 +39,8 @@ const ProCard = ({product}) => {
                               {Incart ?  <HiShoppingCart className="iconFav" size ='26'/> : <HiOutlineShoppingCart  className="iconFav" color='#999' size='26'  onClick = {addcart}/>  }
 
                               <div className='productpricecard'> 
-  {new Intl.NumberFormat( { style: 'currency', currency: 'LKR' }).format(product.price)}
-</div>
+                                {new Intl.NumberFormat( { style: 'currency', currency: 'LKR' }).format(product.price)}
+                                </div>
 
 
                              

@@ -80,9 +80,13 @@ const Placeorder = ({history}) => {
                         <div className="cart-summ">
                             <h1>Order Summary</h1>
                                 <div className="calculs-placeorder">
-                                <h3>Items: </h3><p>{cart.itemsPrice}LKR</p>
-                                <h3>Shipping: </h3><p>{cart.shippingPrice}LKR</p>
-                                <h3>Total: </h3><p>{cart.totalPrice}LKR</p>
+                                <h3>Items: </h3>
+                                    <p>{new Intl.NumberFormat('en-LK', { style: 'currency', currency: 'LKR' }).format(cart.itemsPrice)}</p>
+                                    <h3>Shipping: </h3>
+                                    <p>{new Intl.NumberFormat('en-LK', { style: 'currency', currency: 'LKR' }).format(cart.shippingPrice)}</p>
+                                    <h3>Total: </h3>
+                                    <p>{new Intl.NumberFormat('en-LK', { style: 'currency', currency: 'LKR' }).format(cart.totalPrice)}</p>
+
                                 <div className="div-placeorder-btn"> 
                                     <button className="placeorder-btn" onClick = {Placeorderhanlder}>Place Order</button>
                                     {error && error}

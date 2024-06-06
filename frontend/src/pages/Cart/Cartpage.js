@@ -42,11 +42,14 @@ const Cartpage = ({match,location,history}) => {
         </div>
         <div className = 'totalcart'>
             <h3 className = 'totalprice'>Total :</h3>
-            <h3 className = 'totalprice'>
-            {cartItems.reduce((acc,item )=>
-                acc + item.qty * item.price,0
-             ).toFixed(2)} LKR
-            </h3>
+            {new Intl.NumberFormat('en-LK', {
+    style: 'currency',
+    currency: 'LKR',
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  }).format(
+    cartItems.reduce((acc, item) => acc + item.qty * item.price, 0)
+  )}
             <button className = 'checkoutbtn' disabled={cartItems.length===0} onClick={checkoutHandler}>
             CHECKOUT
             </button>
