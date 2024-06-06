@@ -203,7 +203,9 @@ const ProEdit = ({match,history}) => {
                             <Input type= 'text' placeholder="Product URL 3" onChange = {(e)=>{setUrl3(e.target.value)}}/>
                          </Stack> 
                          </Box>
-                      {/* <Input type= 'text' value={category} onChange = {(e)=>{setcategory((e.target.value).split(' ')) ; }}/> */}
+                      {
+                        
+                      }
             	   </div>
             	</div>
                 {message && <h4 className = 'Message'>{message}</h4>}
