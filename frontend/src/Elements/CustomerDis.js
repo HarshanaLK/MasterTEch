@@ -10,39 +10,27 @@ import './CustomerDis.css'
 import { AiOutlineEdit } from 'react-icons/ai'
 
 
-const CustomerDis = ({location, history}) => {
-  const [name,setName] = useState('')
-  const [ShowOrders] = useState(false)
-  const [email,setEmail] = useState('')
-  const [password,setPassword] = useState('')
+const CustomerDis = ({ history}) => {
+  const dispatch = useDispatch()
+  const userDetails = useSelector(state => state.userDetails)
+  const { error, user } = userDetails
+  const userLogin = useSelector(state => state.userLogin)
+  const {userInfo } = userLogin
+  const nameinput = useRef(null)
+  const emailinput = useRef(null)
   const [confirmPassword,setConfirmPassword] = useState('')
   const [message,setMessage] = useState(null) 
   const [isEditablename,setisEditablename] = useState(false) 
   const [isEditableemail,setisEditableemail] = useState(false) 
-
-  const nameinput = useRef(null)
-  const emailinput = useRef(null)
-
-  const dispatch = useDispatch()
-
-  const userDetails = useSelector(state => state.userDetails)
-
-  const { error, user } = userDetails
-
-
-  const userLogin = useSelector(state => state.userLogin)
-
-  const {userInfo } = userLogin
-
-
-
   const userUpdateProfile = useSelector(state => state.userUpdateProfile)
-
   const {success } = userUpdateProfile
+  const [name,setName] = useState('')
+  const [ShowOrders] = useState(false)
+  const [email,setEmail] = useState('')
+  const [password,setPassword] = useState('')
 
-  const orderMylist = useSelector(state => state.orderMylist)
 
-  const { } = orderMylist
+ 
 
   useEffect(() => {
     if(!userInfo) {
@@ -122,9 +110,6 @@ const CustomerDis = ({location, history}) => {
 				{error && <h4>{error}</h4>}
                 {success && <h4>Profile Updated</h4>}
                 
-
-
-
                 <div className="input-div one">
                        <div className="i">
            		   		<i className="fas fa-user" style={{color:"white"}}></i>
@@ -138,9 +123,6 @@ const CustomerDis = ({location, history}) => {
                <AiOutlineEdit size ='26' style={{color:"white"}} className = 'edit' onClick = {nameinputfocus}/>
 
                
-
-
-
            		<div className="input-div one">
                        
 
@@ -157,11 +139,7 @@ const CustomerDis = ({location, history}) => {
               emailinput.current.focus()
               }}/>
 
-
-
-                
-
-           		<div className="input-div pass">
+              		<div className="input-div pass">
            		   <div className="i"> 
            		    	<i className="fas fa-lock" style={{color:"white"}}></i>
            		   </div>

@@ -11,9 +11,9 @@ const Checkout = ({history}) => {
     const { shippingAddress } = cart
     const [address, setAddress] = useState(shippingAddress.address)
     const [postalCode, setPostalCode] = useState(shippingAddress.postalCode)
-    const [Payment, setPayment] = useState('Card')
+    const [Payment] = useState('Card')
     const dispatch = useDispatch()
-    const [carddetails, setcarddetails] = useState(true)
+    const [carddetails] = useState(true)
     const handleorder = (e)=>{
         e.preventDefault()
          dispatch(saveAddressshipping({ address, postalCode}))

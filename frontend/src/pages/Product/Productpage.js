@@ -19,8 +19,6 @@ const Productpage = ({history,match}) => {
    const dispatch = useDispatch()
    const productDetails = useSelector(state => state.productDetails)
    const {loading,error,product} = productDetails
-   const userLogin = useSelector(state => state.userLogin)
-   const {} = userLogin
    const productReviewCreate = useSelector(state => state.productReviewCreate)
    const {success:successProductReview} = productReviewCreate
 
@@ -40,17 +38,13 @@ function slideImage(){
     imgShowcase.current.style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
 }
 
-
 useEffect(()=>{
   if(successProductReview){
     dispatch({type : PRODUCT_CREATE_REVIEW_RESET})
-
   }
   dispatch(listProductDetails(match.params.id))
-
 }
 ,[dispatch,match,successProductReview])
-
 
   const addToCartHandler = () =>{
     history.push(`/cart/${match.params.id}?qty=${qty}`)
@@ -73,10 +67,6 @@ useEffect(()=>{
               {product.images.map(i => (
               <Image src= {i} />  
               ))}
-
-
-              
-
              
             </div>
           </div>
@@ -133,9 +123,7 @@ useEffect(()=>{
               }
                 </ul>
               </div>
-           
-   
-          
+                     
             </ul>
           </div>
 

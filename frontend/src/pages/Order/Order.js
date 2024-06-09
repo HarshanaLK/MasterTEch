@@ -1,9 +1,7 @@
 import React, { useState,useEffect } from 'react'
-import axios from "axios";
 import { PayPalButton } from 'react-paypal-button-v2';
 import {Link} from 'react-router-dom'
 import { Helmet } from 'react-helmet';
-
 import {useDispatch, useSelector} from 'react-redux'
 import { IoMdDoneAll } from 'react-icons/all';
 import HashLoader from "react-spinners/HashLoader";
@@ -12,7 +10,7 @@ import './Order.css'
 import { ORDER_PAY_RESET,ORDER_DELIVER_RESET } from '../../ConsFunction/orderConstants';
 import { Button } from '@chakra-ui/button';
 const Order = ({match,history}) => {
-    const [sdkReady, setsdkReady] = useState(false)
+    const [sdkReady] = useState(false)
     const orderId = match.params.id
     const dispatch = useDispatch();
     const orderDetails = useSelector(state => state.orderDetails)

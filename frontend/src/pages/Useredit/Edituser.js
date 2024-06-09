@@ -16,16 +16,10 @@ const Edituser = ({match,history}) => {
     const [email,setEmail] = useState('')
     const [isAdmin,setisAdmin] = useState(false)
     const [message] = useState(null) 
-
     const dispatch = useDispatch()
-
     const userDetails = useSelector(state => state.userDetails)
-  
     const { loading,error, user } = userDetails
-
-
     const userUpdate = useSelector(state => state.userUpdate)
-  
     const { loading:loadingUpdate,error:errorUpdate, success:successUpdate } = userUpdate
 
     useEffect(() => {
@@ -61,11 +55,10 @@ const Edituser = ({match,history}) => {
     
     function remcl(){
       let parent = this.parentNode.parentNode;
-      if(this.value == ""){
+      if(this.value === ""){
         parent.classList.remove("focus");
       }
     }
-  
     inputs.forEach(inputa => {
         inputa.addEventListener("focus", addcl);
         inputa.addEventListener("blur", remcl);
