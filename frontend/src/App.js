@@ -1,4 +1,4 @@
-import Contactus from './pages/Contactus/Contactus'
+import PageContact from './pages/PageContact/PageContact'
 import Productpage from './pages/Product/Productpage'
 import Cartpage from './pages/PageCart/Cartpage'
 import Footer from './pages/Footer/Footer'
