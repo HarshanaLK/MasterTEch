@@ -8,8 +8,8 @@ const ProCard = ({product}) => {
     const  [showbtn,setShowbtn] = useState(false) 
     const  [Incart,setIncart] = useState(false) 
     const dispatch = useDispatch();
-    const Cart = useSelector(state => state.cart)
-    const {cartItems} = Cart
+    const PageCart = useSelector(state => state.cart)
+    const {cartItems} = PageCart
     useEffect(() => {
        const isincart = cartItems.find(x => x.product === product._id);
        if(isincart){

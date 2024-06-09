@@ -1,11 +1,11 @@
 import React, {useState, useEffect,useRef} from 'react'
 import {Image} from 'react-bootstrap'
 import {useDispatch, useSelector} from 'react-redux'
-import ProfLogo from './img/logo.png'
+import ProfLogo from './Images/logo.png'
 import { Helmet } from 'react-helmet';
 import {getUserDetails, updateUserProfile} from '../function/fuAction'
 import {listMyOrders } from '../function/fuOrder'
-import ProfPic from "./img/ProfPic.jpg"
+import ProfPic from "./Images/ProfPic.jpg"
 import './CustomerDis.css'
 import { AiOutlineEdit } from 'react-icons/ai'
 

@@ -3,7 +3,7 @@ import { useEffect} from 'react';
 import { Helmet } from 'react-helmet';
 import { useDispatch,useSelector } from 'react-redux';
 import { addToCart } from '../../function/fuCart';
-import CartEmpty from '../../Elements/CartEmpty';
+import EmptyCart from '../../Elements/EmptyCart';
 import Procart from '../../Elements/Procart';
 import './cartcss.css'
 const Cartpage = ({match,location,history}) => {
@@ -25,14 +25,14 @@ const Cartpage = ({match,location,history}) => {
     return (
         <>
         <Helmet>
-            <title>Cart</title>
+            <title>PageCart</title>
         </Helmet>
         {cartItems.length === 0 ? 
-        <CartEmpty />
+        <EmptyCart />
         :
         <div className ='cartfull'>
         <div className = 'cart'>
-            <h1>Cart Items : {cartItems.length}</h1>
+            <h1>PageCart Items : {cartItems.length}</h1>
             <div className ='productsoncart'>
             {cartItems.map(product =>(
                     <Procart product = {product} />

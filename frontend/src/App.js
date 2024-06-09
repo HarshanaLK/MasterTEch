@@ -1,6 +1,6 @@
 import Contactus from './pages/Contactus/Contactus'
 import Productpage from './pages/Product/Productpage'
-import Cartpage from './pages/Cart/Cartpage'
+import Cartpage from './pages/PageCart/Cartpage'
 import Footer from './pages/Footer/Footer'
 import Checkout from "./pages/checkout/Checkout";
 import Placeorder from './pages/placeorder/Placeorder'

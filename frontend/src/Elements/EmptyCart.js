@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import { RiArrowRightSLine  , BsArrowBarRight} from "react-icons/all";
 
 
-const CartEmpty = () => {
+const EmptyCart = () => {
     const [arrow, setarrow] = useState(false)
     return (
         <div className = 'Emptycart'>
             <div className = 'textempty'>
             <h1>
-                Your Cart 🛒 is Cart Empty 😥
+                Your PageCart 🛒 is PageCart Empty 😥
             </h1>
              
             <Link to = '/shop' className ='goshop' onMouseOver = {()=>{setarrow(true)}} onMouseLeave = {()=>{setarrow(false)}}>
@@ -24,4 +24,4 @@ const CartEmpty = () => {
     )
 }
 
-export default CartEmpty
+export default EmptyCart

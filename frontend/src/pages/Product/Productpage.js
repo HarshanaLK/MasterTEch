@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom'
 const Productpage = ({history,match}) => {
    const [qty, setQty] = useState(1)
 
-   const imgs = document.querySelectorAll('.img-select a');
+   const imgs = document.querySelectorAll('.Images-select a');
    const imgShowcase = useRef(null);
    const imgBtns = [...imgs];
    let imgId = 1;
@@ -34,7 +34,7 @@ const Productpage = ({history,match}) => {
 
 
 function slideImage(){
-  const displayWidth = document.querySelector('.img-showcase img:first-child').clientWidth;
+  const displayWidth = document.querySelector('.Images-showcase Images:first-child').clientWidth;
     imgShowcase.current.style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
 }
 
@@ -62,26 +62,26 @@ useEffect(()=>{
      <div className = "card-wrapper">
       <div className = "card">
         <div className = "product-imgs">
-        <div className = "img-display">
-            <div ref={imgShowcase}  className = "img-showcase">
+        <div className = "Images-display">
+            <div ref={imgShowcase}  className = "Images-showcase">
               {product.images.map(i => (
               <Image src= {i} />  
               ))}
              
             </div>
           </div>
-          <div className = "img-select">
-            <div className = "img-item">
+          <div className = "Images-select">
+            <div className = "Images-item">
               <a href = "#" data-id = "1">
                 <Image  objectFit="cover" boxSize = '200px' src = {product.images[0]} />
               </a>
             </div>
-            <div className = "img-item">
+            <div className = "Images-item">
               <a href = "#" data-id = "2">
                 <Image objectFit="cover" boxSize = '200px' src = {product.images[1]} />
               </a>
             </div>
-            <div className = "img-item">
+            <div className = "Images-item">
               <a href = "#" data-id = "3">
                 <Image   boxSize = '200px' src = {product.images[2]} />
               </a>
@@ -128,7 +128,7 @@ useEffect(()=>{
           </div>
 
                <div className = "purchase-info">
-            <Button onClick={addToCartHandler} type = "button"  className = "btn-shop" disabled={product.countInStock === 0}> Add To Cart </Button>
+            <Button onClick={addToCartHandler} type = "button"  className = "btn-shop" disabled={product.countInStock === 0}> Add To PageCart </Button>
           </div>
 
           <div className = "social-links">
