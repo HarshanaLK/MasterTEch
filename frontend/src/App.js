@@ -1,5 +1,5 @@
-import PageContact from './pages/PageContact/PageContact'
 import Productpage from './pages/Product/Productpage'
+import Contactus from './pages/Contactus/Contactus'
 import Cartpage from './pages/PageCart/Cartpage'
 import Footer from './pages/Footer/Footer'
 import Checkout from "./pages/checkout/Checkout";

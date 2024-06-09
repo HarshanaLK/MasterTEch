@@ -6,7 +6,7 @@ import { GiPositionMarker } from 'react-icons/gi';
 import { HiOutlinePhone } from 'react-icons/hi';
 import './contactus.css';
 
-const PageContact = () => {
+const Contactus = () => {
     const [email, setEmail] = useState('');
     const [body, setBody] = useState('');
 
@@ -94,4 +94,4 @@ const PageContact = () => {
     );
 };
 
-export default PageContact;
+export default Contactus;
