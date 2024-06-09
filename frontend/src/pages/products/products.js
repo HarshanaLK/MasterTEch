@@ -8,12 +8,8 @@ import {
   } from "@chakra-ui/react"
 import { CgAdd } from 'react-icons/cg';
 import { Helmet } from 'react-helmet';
-
 const Products = ({history,match}) => {
     const dispatch = useDispatch()
-    const productList = useSelector(state => state.productList)
-    const {} = productList
-
     const productDelete = useSelector(state => state.productDelete)
     const {success:successDelete} = productDelete
 

@@ -1,7 +1,5 @@
 import mongoose from 'mongoose'
 
-
-
 const reviewSchema = mongoose.Schema({
     name : { type: String, required: true},
     rating : { type: Number, required: true},
@@ -9,7 +7,7 @@ const reviewSchema = mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
-        ref : 'User' //relation betwen the review and the user
+        ref : 'User' 
     },
 },{ 
     timestamps: true
@@ -18,7 +16,7 @@ const productSchema = mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
-        ref : 'User' //relation betwen the product and yhe user
+        ref : 'User' 
     },
     name:{
         type : String,
