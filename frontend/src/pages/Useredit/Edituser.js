@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
-import {getUserDetails,updateUser} from '../../function/userActions'
+import {getUserDetails,updateUser} from '../../function/fuAction'
 import { AiOutlineUser, HiOutlineMail} from 'react-icons/all';
 import HashLoader from "react-spinners/HashLoader";
 import './Edituser.css'

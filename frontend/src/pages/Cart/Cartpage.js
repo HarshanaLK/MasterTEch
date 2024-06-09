@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect} from 'react';
 import { Helmet } from 'react-helmet';
 import { useDispatch,useSelector } from 'react-redux';
-import { addToCart } from '../../function/cartActions';
+import { addToCart } from '../../function/fuCart';
 import CartEmpty from '../../Elements/CartEmpty';
 import Procart from '../../Elements/Procart';
 import './cartcss.css'

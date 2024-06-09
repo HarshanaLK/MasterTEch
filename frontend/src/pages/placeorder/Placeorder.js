@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import {Link} from 'react-router-dom'
 import {useDispatch, useSelector} from 'react-redux'
-import { CreateOrder } from "../../function/orderActions";
+import { CreateOrder } from "../../function/fuOrder";
 import { Helmet } from 'react-helmet';
 
 import './Placeorder.css'

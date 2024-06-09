@@ -2,7 +2,7 @@ import {React,useState,useEffect} from 'react'
 import {HiOutlineShoppingCart,HiShoppingCart} from "react-icons/all"
 import { Image } from "@chakra-ui/react"
 import {Link } from 'react-router-dom'
-import { addToCart } from "../function/cartActions";
+import { addToCart } from "../function/fuCart";
 import { useDispatch, useSelector } from 'react-redux'
 const ProCard = ({product}) => {
     const  [showbtn,setShowbtn] = useState(false) 

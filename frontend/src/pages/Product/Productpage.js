@@ -1,7 +1,7 @@
 import React, {useEffect,useState,useRef} from 'react'
 import {useDispatch, useSelector } from 'react-redux'
 import { Helmet } from 'react-helmet';
-import {listProductDetails} from '../../function/productActions'
+import {listProductDetails} from '../../function/fuProduct'
 import {IoLogoFacebook,AiFillTwitterCircle,AiFillInstagram,MdDoNotDisturb}  from "react-icons/all"
 import { Image,Select,Button} from "@chakra-ui/react"
 import HashLoader from "react-spinners/HashLoader";

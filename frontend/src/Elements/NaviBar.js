@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 import {Link, NavLink } from 'react-router-dom'
 import { Button, Menu, MenuButton, MenuItem, MenuList} from "@chakra-ui/react"
 import {IoSearchCircleOutline,BsArrowRightShort,MdKeyboardArrowRight,AiOutlineLogout, IoMdArrowDropdown,TiShoppingCart,FaUserCog } from "react-icons/all"
-import {logout} from '../function/userActions'
+import {logout} from '../function/fuAction'
 import NaviSearch from './NaviSearch';
 import logoImage from './logo.png';
 

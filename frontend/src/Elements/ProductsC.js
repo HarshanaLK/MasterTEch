@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import { useDispatch,useSelector } from 'react-redux'
 import ProCard from './ProCard'
-import {listProducts,ListproductbyCg, Listproductbyfiter} from '../function/productActions'
+import {listProducts,ListproductbyCg, Listproductbyfiter} from '../function/fuProduct'
 import {BsFilter,IoMdClose} from 'react-icons/all'
 import HashLoader from "react-spinners/HashLoader";
 import { Link} from 'react-router-dom'

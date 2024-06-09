@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import {useDispatch, useSelector} from 'react-redux'
 import { Helmet } from 'react-helmet';
-import {register} from '../function/userActions'
+import {register} from '../function/fuAction'
 
 
 const RegUserDis = ({location, history}) => {

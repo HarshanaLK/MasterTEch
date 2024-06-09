@@ -3,8 +3,8 @@ import {Image} from 'react-bootstrap'
 import {useDispatch, useSelector} from 'react-redux'
 import ProfLogo from './img/logo.png'
 import { Helmet } from 'react-helmet';
-import {getUserDetails, updateUserProfile} from '../function/userActions'
-import {listMyOrders } from '../function/orderActions'
+import {getUserDetails, updateUserProfile} from '../function/fuAction'
+import {listMyOrders } from '../function/fuOrder'
 import ProfPic from "./img/ProfPic.jpg"
 import './CustomerDis.css'
 import { AiOutlineEdit } from 'react-icons/ai'
