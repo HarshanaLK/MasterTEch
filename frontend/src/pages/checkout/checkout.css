@@ -64,7 +64,7 @@
 .accept-cards-imgs {
   display: flex;
 }
-.accept-cards-imgs Images {
+.accept-cards-imgs img {
   height: 25px;
   width: 40px;
 }

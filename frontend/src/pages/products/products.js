@@ -1,5 +1,5 @@
 import React,{useEffect} from 'react'
-import { listProducts,CreateProduct} from '../../function/fuProduct';
+import { listProducts,CreateProduct} from '../../function/productActions';
 import { useDispatch, useSelector } from 'react-redux';
 import { PRODUCT_CREATE_RESET } from '../../ConsFunction/productConstants';
 import './products.css'

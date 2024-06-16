@@ -1,36 +1,48 @@
 import React, {useState, useEffect,useRef} from 'react'
 import {Image} from 'react-bootstrap'
 import {useDispatch, useSelector} from 'react-redux'
-import ProfLogo from './Images/logo.png'
+import ProfLogo from './img/logo.png'
 import { Helmet } from 'react-helmet';
-import {getUserDetails, updateUserProfile} from '../function/fuAction'
-import {listMyOrders } from '../function/fuOrder'
-import ProfPic from "./Images/ProfPic.jpg"
+import {getUserDetails, updateUserProfile} from '../function/userActions'
+import {listMyOrders } from '../function/orderActions'
+import ProfPic from "./img/ProfPic.jpg"
 import './CustomerDis.css'
 import { AiOutlineEdit } from 'react-icons/ai'
 
 
-const CustomerDis = ({ history}) => {
-  const dispatch = useDispatch()
-  const userDetails = useSelector(state => state.userDetails)
-  const { error, user } = userDetails
-  const userLogin = useSelector(state => state.userLogin)
-  const {userInfo } = userLogin
-  const nameinput = useRef(null)
-  const emailinput = useRef(null)
-  const [confirmPassword,setConfirmPassword] = useState('')
-  const [message,setMessage] = useState(null) 
-  const [isEditablename,setisEditablename] = useState(false) 
-  const [isEditableemail,setisEditableemail] = useState(false) 
-  const userUpdateProfile = useSelector(state => state.userUpdateProfile)
-  const {success } = userUpdateProfile
+const CustomerDis = ({location, history}) => {
   const [name,setName] = useState('')
   const [ShowOrders] = useState(false)
   const [email,setEmail] = useState('')
   const [password,setPassword] = useState('')
+  const [confirmPassword,setConfirmPassword] = useState('')
+  const [message,setMessage] = useState(null) 
+  const [isEditablename,setisEditablename] = useState(false) 
+  const [isEditableemail,setisEditableemail] = useState(false) 
+
+  const nameinput = useRef(null)
+  const emailinput = useRef(null)
+
+  const dispatch = useDispatch()
+
+  const userDetails = useSelector(state => state.userDetails)
+
+  const { error, user } = userDetails
 
 
- 
+  const userLogin = useSelector(state => state.userLogin)
+
+  const {userInfo } = userLogin
+
+
+
+  const userUpdateProfile = useSelector(state => state.userUpdateProfile)
+
+  const {success } = userUpdateProfile
+
+  const orderMylist = useSelector(state => state.orderMylist)
+
+  const { } = orderMylist
 
   useEffect(() => {
     if(!userInfo) {
@@ -110,6 +122,9 @@ const CustomerDis = ({ history}) => {
 				{error && <h4>{error}</h4>}
                 {success && <h4>Profile Updated</h4>}
                 
+
+
+
                 <div className="input-div one">
                        <div className="i">
            		   		<i className="fas fa-user" style={{color:"white"}}></i>
@@ -123,6 +138,9 @@ const CustomerDis = ({ history}) => {
                <AiOutlineEdit size ='26' style={{color:"white"}} className = 'edit' onClick = {nameinputfocus}/>
 
                
+
+
+
            		<div className="input-div one">
                        
 
@@ -139,7 +157,11 @@ const CustomerDis = ({ history}) => {
               emailinput.current.focus()
               }}/>
 
-              		<div className="input-div pass">
+
+
+                
+
+           		<div className="input-div pass">
            		   <div className="i"> 
            		    	<i className="fas fa-lock" style={{color:"white"}}></i>
            		   </div>

@@ -2,14 +2,14 @@ import {React,useState,useEffect} from 'react'
 import {HiOutlineShoppingCart,HiShoppingCart} from "react-icons/all"
 import { Image } from "@chakra-ui/react"
 import {Link } from 'react-router-dom'
-import { addToCart } from "../function/fuCart";
+import { addToCart } from "../function/cartActions";
 import { useDispatch, useSelector } from 'react-redux'
 const ProCard = ({product}) => {
     const  [showbtn,setShowbtn] = useState(false) 
     const  [Incart,setIncart] = useState(false) 
     const dispatch = useDispatch();
-    const PageCart = useSelector(state => state.cart)
-    const {cartItems} = PageCart
+    const Cart = useSelector(state => state.cart)
+    const {cartItems} = Cart
     useEffect(() => {
        const isincart = cartItems.find(x => x.product === product._id);
        if(isincart){

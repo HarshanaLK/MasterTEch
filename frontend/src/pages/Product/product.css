@@ -18,34 +18,34 @@
   margin: 120px auto;
   margin-top: 130px;
 }
-.Images-display {
+.img-display {
   overflow: hidden;
 }
-.Images-showcase {
+.img-showcase {
   display: flex;
   width: 100%;
   transition: all 0.5s ease;
 }
-.Images-showcase Images {
+.img-showcase img {
   min-width: 100%;
 }
-.Images-select {
+.img-select {
   display: flex;
   justify-content: center;
   height: 200px;
 }
-.Images-item {
+.img-item {
   margin: 0.3rem;
   
 }
 
-.Images-item:nth-child(1),
-.Images-item:nth-child(2),
-.Images-item:nth-child(3) {
+.img-item:nth-child(1),
+.img-item:nth-child(2),
+.img-item:nth-child(3) {
   margin-right: 0;
   
 }
-.Images-item:hover {
+.img-item:hover {
   opacity: 0.6;
 }
 

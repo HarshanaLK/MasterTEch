@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet';
 import { Input, Stack, Image, Link } from "@chakra-ui/react"
-
+import {RiShoppingCart2Line} from "react-icons/all"
 import './checkout.css'
-import { saveAddressshipping,savepaymentmethod } from '../../function/fuCart'
+import { saveAddressshipping,savepaymentmethod } from '../../function/cartActions'
 import { useDispatch, useSelector } from 'react-redux'
 
 const Checkout = ({history}) => {
@@ -11,9 +11,9 @@ const Checkout = ({history}) => {
     const { shippingAddress } = cart
     const [address, setAddress] = useState(shippingAddress.address)
     const [postalCode, setPostalCode] = useState(shippingAddress.postalCode)
-    const [Payment] = useState('Card')
+    const [Payment, setPayment] = useState('Card')
     const dispatch = useDispatch()
-    const [carddetails] = useState(true)
+    const [carddetails, setcarddetails] = useState(true)
     const handleorder = (e)=>{
         e.preventDefault()
          dispatch(saveAddressshipping({ address, postalCode}))

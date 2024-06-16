@@ -3,8 +3,8 @@ import {useSelector, useDispatch} from 'react-redux'
 import { Route } from 'react-router-dom';
 import {Link, NavLink } from 'react-router-dom'
 import { Button, Menu, MenuButton, MenuItem, MenuList} from "@chakra-ui/react"
-import {IoSearchCircleOutline,BsArrowRightShort,MdKeyboardArrowRight,AiOutlineLogout, IoMdArrowDropdown,TiShoppingCart,FaUserCog } from "react-icons/all"
-import {logout} from '../function/fuAction'
+import {RiShoppingCart2Line,IoSearchCircleOutline,BsArrowRightShort,MdKeyboardArrowRight,AiOutlineLogout,CgProfile, IoMdArrowDropdown,TiShoppingCart,FaUserCog } from "react-icons/all"
+import {logout} from '../function/userActions'
 import NaviSearch from './NaviSearch';
 import logoImage from './logo.png';
 
@@ -34,7 +34,12 @@ import logoImage from './logo.png';
             searchRef.current.classList.toggle('searchActive')
             searchRef.current.style.animation = 'moving 0.3s ease both 0.3s'
         }  
+        const onDelSeacrh =  () =>{
+            
+            setShowSearchIc(!showSearchIc)
+            searchRef.current.classList.toggle('searchActive')
 
+        }
 
         const onBurgActive = () =>{
         

@@ -1,8 +1,10 @@
 import React from 'react'
+import {FiFacebook, AiOutlineInstagram, IoLogoYoutube} from 'react-icons/all';
+import { Input,Stack } from '@chakra-ui/react'
+import './footercss.css'
 import { Link } from 'react-router-dom';
 import { FaTiktok } from "react-icons/fa6";
-import {FiFacebook, IoLogoYoutube} from 'react-icons/all';
-import './footercss.css'
+
 
 
 const Footer = () => {

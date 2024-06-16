@@ -1,7 +1,7 @@
 import React, {useEffect,useState,useRef} from 'react'
 import {useDispatch, useSelector } from 'react-redux'
 import { Helmet } from 'react-helmet';
-import {listProductDetails} from '../../function/fuProduct'
+import {listProductDetails} from '../../function/productActions'
 import {IoLogoFacebook,AiFillTwitterCircle,AiFillInstagram,MdDoNotDisturb}  from "react-icons/all"
 import { Image,Select,Button} from "@chakra-ui/react"
 import HashLoader from "react-spinners/HashLoader";
@@ -12,13 +12,15 @@ import { Link } from 'react-router-dom'
 const Productpage = ({history,match}) => {
    const [qty, setQty] = useState(1)
 
-   const imgs = document.querySelectorAll('.Images-select a');
+   const imgs = document.querySelectorAll('.img-select a');
    const imgShowcase = useRef(null);
    const imgBtns = [...imgs];
    let imgId = 1;
    const dispatch = useDispatch()
    const productDetails = useSelector(state => state.productDetails)
    const {loading,error,product} = productDetails
+   const userLogin = useSelector(state => state.userLogin)
+   const {} = userLogin
    const productReviewCreate = useSelector(state => state.productReviewCreate)
    const {success:successProductReview} = productReviewCreate
 
@@ -34,17 +36,21 @@ const Productpage = ({history,match}) => {
 
 
 function slideImage(){
-  const displayWidth = document.querySelector('.Images-showcase Images:first-child').clientWidth;
+  const displayWidth = document.querySelector('.img-showcase img:first-child').clientWidth;
     imgShowcase.current.style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
 }
+
 
 useEffect(()=>{
   if(successProductReview){
     dispatch({type : PRODUCT_CREATE_REVIEW_RESET})
+
   }
   dispatch(listProductDetails(match.params.id))
+
 }
 ,[dispatch,match,successProductReview])
+
 
   const addToCartHandler = () =>{
     history.push(`/cart/${match.params.id}?qty=${qty}`)
@@ -62,26 +68,30 @@ useEffect(()=>{
      <div className = "card-wrapper">
       <div className = "card">
         <div className = "product-imgs">
-        <div className = "Images-display">
-            <div ref={imgShowcase}  className = "Images-showcase">
+        <div className = "img-display">
+            <div ref={imgShowcase}  className = "img-showcase">
               {product.images.map(i => (
               <Image src= {i} />  
               ))}
+
+
+              
+
              
             </div>
           </div>
-          <div className = "Images-select">
-            <div className = "Images-item">
+          <div className = "img-select">
+            <div className = "img-item">
               <a href = "#" data-id = "1">
                 <Image  objectFit="cover" boxSize = '200px' src = {product.images[0]} />
               </a>
             </div>
-            <div className = "Images-item">
+            <div className = "img-item">
               <a href = "#" data-id = "2">
                 <Image objectFit="cover" boxSize = '200px' src = {product.images[1]} />
               </a>
             </div>
-            <div className = "Images-item">
+            <div className = "img-item">
               <a href = "#" data-id = "3">
                 <Image   boxSize = '200px' src = {product.images[2]} />
               </a>
@@ -123,12 +133,14 @@ useEffect(()=>{
               }
                 </ul>
               </div>
-                     
+           
+   
+          
             </ul>
           </div>
 
                <div className = "purchase-info">
-            <Button onClick={addToCartHandler} type = "button"  className = "btn-shop" disabled={product.countInStock === 0}> Add To PageCart </Button>
+            <Button onClick={addToCartHandler} type = "button"  className = "btn-shop" disabled={product.countInStock === 0}> Add To Cart </Button>
           </div>
 
           <div className = "social-links">

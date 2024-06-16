@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
-import {listProductDetails,UpdateProduct} from '../../function/fuProduct'
+import {listProductDetails,UpdateProduct} from '../../function/productActions'
 import HashLoader from "react-spinners/HashLoader";
 import { Input, InputGroup, } from '@chakra-ui/input'
 import { Helmet } from 'react-helmet';

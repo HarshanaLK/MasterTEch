@@ -1,5 +1,5 @@
 import React,{useEffect} from 'react'
-import { listOrders} from '../../function/fuOrder';
+import { listOrders} from '../../function/orderActions';
 import { useDispatch, useSelector } from 'react-redux';
 import HashLoader from "react-spinners/HashLoader";
 import { Helmet } from 'react-helmet';
